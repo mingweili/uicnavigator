@@ -47,6 +47,11 @@
     <string name="settings_default_location_summary">The default location in map when app starts</string>
     <string name="settings_default_location_dialog_title">Please choose</string>
     <string name="settings_default_location_default_value">My Location</string>
+    
+    <!-- labels of About activity -->
+    <string name="about_title">About</string>
+    <string name="about_copyright_label">© 2014 Mingwei Li</string>
+    <string name="about_app_name_version">UIC Navigator 1.0</string>
 
     <!-- labels needed in source code for readibility, most of them are intent extra labels -->
     <string name="EXTRA_MESSAGE_BUILDING_OBJECT">com.mingweili.navigator.extra_messages.main.building_object</string>
@@ -54,12 +59,11 @@
     <string name="EXTRA_MESSAGE_START_FOR_RESULT_LABEL">com.mingweili.navigator.extra_messages.navigation.call_for_result_label</string>
     <string name="EXTRA_MESSAGE_SENT_FROM">com.mingweili.navigator.extra_messages.building_inventory.sent_from</string>
     <string name="EXTRA_MESSAGE_FROM_OR_TO">com.mingweili.navigator.extra_messages.building_inventory.from_or_to</string>
-
     <string name="ERROR_MESSAGE_LOCATION_CONNECT">Failed to retrieve your location.</string>
     <string name="ERROR_MESSAGE_RESOURCE_READING">Failed to read resources.</string>
     <string name="ERROR_MESSAGE_NAVIGATION_SELECTION">Error in building selection.</string>
     <string name="ERROR_MESSAGE_INVALID_INPUT">Please specify origin/destination.</string>
-    
+
     <!-- some temperary labels unclear -->
     <string name="placeholder">placeholder</string>
 

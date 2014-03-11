@@ -100,7 +100,7 @@ public class BuildingInfoActivity extends Activity {
 	            startActivity(intent);
 	            return true;
 	        case R.id.main_menu_action_about:
-	            intent.setClass(this, BuildingInventoryActivity.class);
+	            intent.setClass(this, AboutActivity.class);
 	            startActivity(intent);
 	            return true;
 	        default:

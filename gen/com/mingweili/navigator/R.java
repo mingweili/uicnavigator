@@ -247,40 +247,43 @@ containing a value of this type.
         public static final int tab_unselected_uictheme=0x7f02002f;
     }
     public static final class id {
-        public static final int building_info_id_textview=0x7f060006;
-        public static final int building_info_image_imageview=0x7f060005;
-        public static final int building_info_map=0x7f060008;
-        public static final int building_info_menu_action_navigate=0x7f06001b;
-        public static final int building_info_name_textview=0x7f060007;
-        public static final int building_inventory_action_search=0x7f06001e;
-        public static final int building_inventory_list=0x7f06001a;
-        public static final int campus_tabs_pager=0x7f060009;
+        public static final int about_app_icon_imageview=0x7f060006;
+        public static final int about_app_name_version_textview=0x7f060007;
+        public static final int about_copyright_textview=0x7f060005;
+        public static final int building_info_id_textview=0x7f060009;
+        public static final int building_info_image_imageview=0x7f060008;
+        public static final int building_info_map=0x7f06000b;
+        public static final int building_info_menu_action_navigate=0x7f06001e;
+        public static final int building_info_name_textview=0x7f06000a;
+        public static final int building_inventory_action_search=0x7f060021;
+        public static final int building_inventory_list=0x7f06001d;
+        public static final int campus_tabs_pager=0x7f06000c;
         public static final int hybrid=0x7f060004;
-        public static final int info_window_bldg_id=0x7f060015;
-        public static final int info_window_bldg_name=0x7f060016;
-        public static final int info_window_bldg_thumbnail=0x7f060014;
-        public static final int list_row_depts=0x7f060019;
-        public static final int list_row_desc=0x7f060018;
-        public static final int list_row_title=0x7f060017;
-        public static final int main_menu_action_about=0x7f06001d;
-        public static final int main_menu_action_navigate=0x7f060020;
-        public static final int main_menu_action_satellite_switch=0x7f060021;
-        public static final int main_menu_action_settings=0x7f06001c;
-        public static final int main_menu_action_show_list=0x7f06001f;
-        public static final int map=0x7f06000a;
-        public static final int navigation_from_edittext=0x7f06000c;
-        public static final int navigation_from_label_textview=0x7f06000b;
-        public static final int navigation_locate_from_imagebutton=0x7f06000d;
-        public static final int navigation_locate_to_imagebutton=0x7f060010;
-        public static final int navigation_menu_action_navigate=0x7f060022;
-        public static final int navigation_select_from_button=0x7f06000e;
-        public static final int navigation_select_to_button=0x7f060012;
-        public static final int navigation_to_edittext=0x7f060011;
-        public static final int navigation_to_label_textview=0x7f06000f;
+        public static final int info_window_bldg_id=0x7f060018;
+        public static final int info_window_bldg_name=0x7f060019;
+        public static final int info_window_bldg_thumbnail=0x7f060017;
+        public static final int list_row_depts=0x7f06001c;
+        public static final int list_row_desc=0x7f06001b;
+        public static final int list_row_title=0x7f06001a;
+        public static final int main_menu_action_about=0x7f060020;
+        public static final int main_menu_action_navigate=0x7f060023;
+        public static final int main_menu_action_satellite_switch=0x7f060024;
+        public static final int main_menu_action_settings=0x7f06001f;
+        public static final int main_menu_action_show_list=0x7f060022;
+        public static final int map=0x7f06000d;
+        public static final int navigation_from_edittext=0x7f06000f;
+        public static final int navigation_from_label_textview=0x7f06000e;
+        public static final int navigation_locate_from_imagebutton=0x7f060010;
+        public static final int navigation_locate_to_imagebutton=0x7f060013;
+        public static final int navigation_menu_action_navigate=0x7f060025;
+        public static final int navigation_select_from_button=0x7f060011;
+        public static final int navigation_select_to_button=0x7f060015;
+        public static final int navigation_to_edittext=0x7f060014;
+        public static final int navigation_to_label_textview=0x7f060012;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int satellite=0x7f060002;
-        public static final int settings_fragment=0x7f060013;
+        public static final int settings_fragment=0x7f060016;
         public static final int terrain=0x7f060003;
     }
     public static final class integer {
@@ -288,14 +291,15 @@ containing a value of this type.
         public static final int initial_zoom_level=0x7f080001;
     }
     public static final class layout {
-        public static final int activity_building_info=0x7f030000;
-        public static final int activity_building_inventory=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_navigation=0x7f030003;
-        public static final int activity_settings=0x7f030004;
-        public static final int custom_info_window=0x7f030005;
-        public static final int custom_list_row=0x7f030006;
-        public static final int fragment_campus_list=0x7f030007;
+        public static final int activity_about=0x7f030000;
+        public static final int activity_building_info=0x7f030001;
+        public static final int activity_building_inventory=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_navigation=0x7f030004;
+        public static final int activity_settings=0x7f030005;
+        public static final int custom_info_window=0x7f030006;
+        public static final int custom_list_row=0x7f030007;
+        public static final int fragment_campus_list=0x7f030008;
     }
     public static final class menu {
         public static final int building_info=0x7f0c0000;
@@ -304,17 +308,22 @@ containing a value of this type.
         public static final int navigation=0x7f0c0003;
     }
     public static final class string {
-        public static final int ERROR_MESSAGE_INVALID_INPUT=0x7f070041;
-        public static final int ERROR_MESSAGE_LOCATION_CONNECT=0x7f07003e;
-        public static final int ERROR_MESSAGE_NAVIGATION_SELECTION=0x7f070040;
-        public static final int ERROR_MESSAGE_RESOURCE_READING=0x7f07003f;
+        public static final int ERROR_MESSAGE_INVALID_INPUT=0x7f070044;
+        public static final int ERROR_MESSAGE_LOCATION_CONNECT=0x7f070041;
+        public static final int ERROR_MESSAGE_NAVIGATION_SELECTION=0x7f070043;
+        public static final int ERROR_MESSAGE_RESOURCE_READING=0x7f070042;
         /**  labels needed in source code for readibility, most of them are intent extra labels 
          */
-        public static final int EXTRA_MESSAGE_BUILDING_OBJECT=0x7f070039;
-        public static final int EXTRA_MESSAGE_DESTINATION=0x7f07003a;
-        public static final int EXTRA_MESSAGE_FROM_OR_TO=0x7f07003d;
-        public static final int EXTRA_MESSAGE_SENT_FROM=0x7f07003c;
-        public static final int EXTRA_MESSAGE_START_FOR_RESULT_LABEL=0x7f07003b;
+        public static final int EXTRA_MESSAGE_BUILDING_OBJECT=0x7f07003c;
+        public static final int EXTRA_MESSAGE_DESTINATION=0x7f07003d;
+        public static final int EXTRA_MESSAGE_FROM_OR_TO=0x7f070040;
+        public static final int EXTRA_MESSAGE_SENT_FROM=0x7f07003f;
+        public static final int EXTRA_MESSAGE_START_FOR_RESULT_LABEL=0x7f07003e;
+        public static final int about_app_name_version=0x7f07003b;
+        public static final int about_copyright_label=0x7f07003a;
+        /**  labels of About activity 
+         */
+        public static final int about_title=0x7f070039;
         /**  Application Name 
          */
         public static final int app_name=0x7f07001a;
@@ -448,7 +457,7 @@ containing a value of this type.
         public static final int navigation_to_label=0x7f070029;
         /**  some temperary labels unclear 
          */
-        public static final int placeholder=0x7f070042;
+        public static final int placeholder=0x7f070045;
         public static final int settings_default_location_default_value=0x7f070038;
         public static final int settings_default_location_dialog_title=0x7f070037;
         public static final int settings_default_location_key=0x7f070034;

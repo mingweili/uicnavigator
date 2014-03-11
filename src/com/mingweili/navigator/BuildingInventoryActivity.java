@@ -230,7 +230,7 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 	            startActivity(intent);
 	            return true;
 	        case R.id.main_menu_action_about:
-	            intent.setClass(this, BuildingInventoryActivity.class);
+	            intent.setClass(this, AboutActivity.class);
 	            startActivity(intent);
 	            return true;
 	        default:
