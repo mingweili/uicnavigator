@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_default_location_choices">
+        <item>My Location</item>
+        <item>East Campus</item>
+        <item>West Campus</item>
+    </string-array>
+</resources>

@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <building id="AA">
+        <name>Art and Architecture Building</name>
+        <lat>41.873659</lat>
+        <lng>-87.648725</lng>
+        <area>east</area>
+        <depts>
+            <dept>Architecture, School of</dept>
+        </depts>
+    </building>
+    <building id="ADH">
+        <name>Art and Design Hall</name>
+        <lat>41.876489</lat>
+        <lng>-87.649839</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="AH">
+        <name>Adams Hall</name>
+        <lat>41.870969</lat>
+        <lng>-87.649017</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="BH">
+        <name>Burnham Hall</name>
+        <lat>41.870980</lat>
+        <lng>-87.649468</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="BSB">
+        <name>Behavioral Sciences Building</name>
+        <lat>41.873788</lat>
+        <lng>-87.652772</lng>
+        <area>east</area>
+        <depts>
+			<dept>Anthropology, Department of</dept>
+			<dept>Communication, Department of</dept>
+			<dept>Criminology, Law and Justice, Department of</dept>
+			<dept>Geography</dept>
+			<dept>International Studies</dept>
+			<dept>Office of Social Science Research</dept>
+			<dept>Political Science, Department of</dept>
+			<dept>Psychology, Department of</dept>
+			<dept>Sociology, Department of</dept>
+        </depts>
+    </building>
+    <building id="CEB">
+        <name>Chemical Engineering Building</name>
+        <lat>41.87155</lat>
+        <lng>-87.641243</lng>
+        <area>east</area>
+        <depts>
+            <dept>Chemical Engineering, Department of</dept>
+        </depts>
+    </building>
+    <building id="CUPPAH">
+        <name>College of Urban Planning and Public Affairs Hall</name>
+        <lat>41.876165</lat>
+        <lng>-87.649822</lng>
+        <area>east</area>
+        <depts>
+			<dept>Urban Planning and Public Affairs, College of</dept>
+			<dept>Public Administration, Department of</dept>
+			<dept>Urban Planning and Policy, Department of</dept>
+        </depts>
+    </building>
+    <building id="DH">
+        <name>Douglas Hall</name>
+        <lat>41.872799</lat>
+        <lng>-87.649046</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="EPASW">
+        <name>Education, Performing Arts and Social Work</name>
+        <lat>41.874942</lat>
+        <lng>-87.653105</lng>
+        <area>east</area>
+        <depts>
+            <dept>Theatre and Music, School of</dept>
+            <dept>Education, College of</dept>
+            <dept>Curriculum and Instruction, Department of</dept>
+            <dept>Educational Policy Studies, Department of</dept>
+            <dept>Educational Psychology, Department of</dept>
+            <dept>Department of Special Education, Department of</dept>
+            <dept>Jane Addams Social Work, College of</dept>
+        </depts>
+    </building>
+    <building id="ERF">
+        <name>Engineering Research Facility</name>
+        <lat>41.869901</lat>
+        <lng>-87.647813</lng>
+        <area>east</area>
+        <depts>
+            <dept>Civil and Materials Engineering, Department of</dept>
+        </depts>
+    </building>
+    <building id="FAC">
+        <name>Flames Athletic Center</name>
+        <lat>41.866426</lat>
+        <lng>-87.64832</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="FORUM">
+        <name>Forum</name>
+        <lat>41.866801</lat>
+        <lng>-87.646158</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="GH">
+        <name>Grant Hall</name>
+        <lat>41.872857</lat>
+        <lng>-87.649462</lng>
+        <area>east</area>
+        <depts>
+			<dept>Language and Culture Learning Center</dept>
+        </depts>
+    </building>
+    <building id="HH">
+        <name>Henry Hall</name>
+        <lat>41.874057</lat>
+        <lng>-87.650589</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="HLPS">
+        <name>Halsted Street Parking Structure</name>
+        <lat>41.870586</lat>
+        <lng>-87.646273</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="HRPS">
+        <name>Harrison Street Parking Structure</name>
+        <lat>41.874855</lat>
+        <lng>-87.655063</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="JAH">
+        <name>Jane Addams Hull-House</name>
+        <lat>41.871594</lat>
+        <lng>-87.647406</lng>
+        <area>east</area>
+        <depts>
+            <dept>Jane Addams Hull-House Museum</dept>
+        </depts>
+    </building>
+    <building id="JAHD">
+        <name>Jane Addams Residents' Dining Hall</name>
+        <lat>41.871355</lat>
+        <lng>-87.647426</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="JH">
+        <name>Jefferson Hall</name>
+        <lat>41.873984</lat>
+        <lng>-87.650176</lng>
+        <area>east</area>
+        <depts>
+            <dept>Art and Art History, School of</dept>
+            <dept>Art and Design, School of</dept>
+        </depts>
+    </building>
+    <building id="JJST">
+        <name>James J. Stukel Towers</name>
+        <lat>41.86629</lat>
+        <lng>-87.646614</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LCA">
+        <name>Lecture Centers A</name>
+        <lat>41.872026</lat>
+        <lng>-87.6498</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LCB">
+        <name>Lecture Centers B</name>
+        <lat>41.872202</lat>
+        <lng>-87.649242</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LCC">
+        <name>Lecture Centers C</name>
+        <lat>41.872122</lat>
+        <lng>-87.648695</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LCD">
+        <name>Lecture Centers D</name>
+        <lat>41.871715</lat>
+        <lng>-87.648684</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LCE">
+        <name>Lecture Centers E</name>
+        <lat>41.871607</lat>
+        <lng>-87.649226</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LCF">
+        <name>Lecture Centers F</name>
+        <lat>41.871691</lat>
+        <lng>-87.649784</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LH">
+        <name>Lincoln Hall</name>
+        <lat>41.872503</lat>
+        <lng>-87.649261</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LIB">
+        <name>Library, Richard J. Daley</name>
+        <lat>41.871887</lat>
+        <lng>-87.650503</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="MRH">
+        <name>Marie Robinson Hall</name>
+        <lat>41.864364</lat>
+        <lng>-87.647365</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="MSPS">
+        <name>Maxwell Street Parking Structure</name>
+        <lat>41.864522</lat>
+        <lng>-87.645224</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="PAV">
+        <name>Pavilion</name>
+        <lat>41.874679</lat>
+        <lng>-87.656103</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="PEB">
+        <name>Physical Education Building</name>
+        <lat>41.86663</lat>
+        <lng>-87.649607</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="PRL">
+        <name>Plant Research Laboratory</name>
+        <lat>41.869154</lat>
+        <lng>-87.646174</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="PS">
+        <name>Police Station</name>
+        <lat>41.864504</lat>
+        <lng>-87.650626</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="RB">
+        <name>Rice Building</name>
+        <lat>41.876404</lat>
+        <lng>-87.647998</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="RRB">
+        <name>Roosevelt Road Building</name>
+        <lat>41.867884</lat>
+        <lng>-87.645691</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SCB">
+        <name>Sangamon Center Building</name>
+        <lat>41.876177</lat>
+        <lng>-87.650433</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SCE">
+        <name>Student Center East</name>
+        <lat>41.871908</lat>
+        <lng>-87.647874</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SCET">
+        <name>Student Center East Tower</name>
+        <lat>41.872821</lat>
+        <lng>-87.647815</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SELE">
+        <name>Science and Engineering Laboratory East</name>
+        <lat>41.870544</lat>
+        <lng>-87.647966</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SELW">
+        <name>Science and Engineering Laboratory West</name>
+        <lat>41.870524</lat>
+        <lng>-87.648974</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SEO">
+        <name>Science and Engineering Offices</name>
+        <lat>41.870898</lat>
+        <lng>-87.650449</lng>
+        <area>east</area>
+        <depts>
+            <dept>Engineering, College of</dept>
+            <dept>Bioengineering, Department of (East)</dept>
+            <dept>Computer Science, Department of</dept>
+            <dept>Electrical and Computer Engineering, Department of</dept>
+            <dept>Mathematics, Statistics, and Computer Science, Department of</dept>
+        </depts>
+    </building>
+    <building id="SES">
+        <name>Science and Engineering South</name>
+        <lat>41.868998</lat>
+        <lng>-87.648</lng>
+        <area>east</area>
+        <depts>
+            <dept>Biological Sciences, Department of</dept>
+            <dept>Chemistry, Department of</dept>
+            <dept>Earth and Environmental Sciences, Department of</dept>
+            <dept>Physics, Department of</dept>
+        </depts>
+    </building>
+    <building id="SH">
+        <name>Stevenson Hall</name>
+        <lat>41.872865</lat>
+        <lng>-87.650321</lng>
+        <area>east</area>
+        <depts>
+            <dept>Institute for the Humanities</dept>
+        </depts>
+    </building>
+    <building id="SRCC">
+        <name>Student Residence and Commons Courtyard</name>
+        <lat>41.873772</lat>
+        <lng>-87.648062</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SRCS">
+        <name>Student Residence and Commons South</name>
+        <lat>41.873249</lat>
+        <lng>-87.647434</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SRCW">
+        <name>Student Residence and Commons West</name>
+        <lat>41.874211</lat>
+        <lng>-87.648958</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SRF">
+        <name>Student Recreation Facility</name>
+        <lat>41.872226</lat>
+        <lng>-87.646485</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="SSB">
+        <name>Student Services Building</name>
+        <lat>41.874831</lat>
+        <lng>-87.657439</lng>
+        <area>east</area>
+        <depts>
+            <dept>Learning Sciences Research Institute</dept>
+        </depts>
+    </building>
+    <building id="TBH">
+        <name>Thomas Beckham Hall</name>
+        <lat>41.865363</lat>
+        <lng>-87.647681</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="TF">
+        <name>Transportation Facility</name>
+        <lat>41.864057</lat>
+        <lng>-87.650406</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="TH">
+        <name>Taft Hall</name>
+        <lat>41.871299</lat>
+        <lng>-87.64921</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="TSB">
+        <name>Taylor Street Building</name>
+        <lat>41.869332</lat>
+        <lng>-87.654448</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="UH">
+        <name>University Hall</name>
+        <lat>41.873908</lat>
+        <lng>-87.650991</lng>
+        <area>east</area>
+        <depts>
+            <dept>Graduate College</dept>
+            <dept>Business Administration, College of</dept>
+            <dept>Accounting, Department of</dept>
+            <dept>Finance, Department of</dept>
+            <dept>Information and Decision Sciences, Department of</dept>
+            <dept>Managerial Studies, Department of</dept>
+            <dept>Gender and Women's Studies</dept>
+            <dept>The Latin American and Latino Studies</dept>
+            <dept>African American Studies, Department of</dept>
+            <dept>Asian American Studies</dept>
+            <dept>Catholic Studies</dept>
+            <dept>Classics and Mediterranean Studies, Department of</dept>
+            <dept>Economics, Department of</dept>
+            <dept>English, Department of</dept>
+            <dept>Germanic Studies, Department of</dept>
+            <dept>History, Department of</dept>
+            <dept>Jewish Studies</dept>
+            <dept>Literatures, Cultural Studies and Linguistics, School of</dept>
+            <dept>Philosophy, Department of</dept>
+            <dept>Slavic and Baltic Languages and Literatures, Department of</dept>
+        </depts>
+    </building>
+    <building id="UICT">
+        <name>Theater</name>
+        <lat>41.874572</lat>
+        <lng>-87.65325</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="UTB">
+        <name>Utilities Building</name>
+        <lat>41.868431</lat>
+        <lng>-87.651629</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="1253">
+        <name>1253 South Halsted</name>
+        <lat>41.865651</lat>
+        <lng>-87.646587</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="1309">
+        <name>1309 South Halsted</name>
+        <lat>41.865127</lat>
+        <lng>-87.646565</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="1333">
+        <name>1333 South Halsted</name>
+        <lat>41.864464</lat>
+        <lng>-87.646517</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="722">
+        <name>722 West Maxwell</name>
+        <lat>41.864993</lat>
+        <lng>-87.646158</lng>
+        <area>east</area>
+        <depts>
+        </depts>
+    </building>
+    
+    <building id="AHSB">
+        <name>Applied Health Sciences Building</name>
+        <lat>41.86818</lat>
+        <lng>-87.674788</lng>
+        <area>west</area>
+        <depts>
+            <dept>Biomedical and Health Information Sciences, Department of</dept>
+            <dept>Kinesiology and Nutrition, Department of</dept>
+            <dept>Occupational Therapy, Department of</dept>
+            <dept>Physical Therapy, Department of</dept>
+        </depts>
+    </building>
+    <building id="AOB">
+        <name>Administrative Office Building</name>
+        <lat>41.871303</lat>
+        <lng>-87.670587</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="ATKINS GARDEN">
+        <name>ATKINS GARDEN</name>
+        <lat>41.871329</lat>
+        <lng>-87.671105</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="BGRC">
+        <name>Benjamin Goldberg Research Center</name>
+        <lat>41.869478</lat>
+        <lng>-87.675533</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="BRL">
+        <name>Biologic Resources Laboratory</name>
+        <lat>41.869526</lat>
+        <lng>-87.672781</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="CFSB">
+        <name>Center for Structural Biology</name>
+        <lat>41.86814</lat>
+        <lng>-87.666864</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="CMET">
+        <name>College of Medicine East Tower</name>
+        <lat>41.871343</lat>
+        <lng>-87.671837</lng>
+        <area>west</area>
+        <depts>
+            <dept>Applied Health Sciences, College of</dept>
+            <dept>UIC Neuroscience</dept>
+            <dept>Dermatology, Department of</dept>
+            <dept>Emergency Medicine (Administrative)</dept>
+            <dept>Medical Education, Department of</dept>
+            <dept>Medicine, Department of</dept>
+            <dept>Pathology, Department of</dept>
+            <dept>Surgery, Department of</dept>
+            <dept>Surgical Oncology, Department of</dept>
+            <dept>Urology, Department of</dept>
+        </depts>
+    </building>
+    <building id="CMW">
+        <name>College of Medicine West</name>
+        <lat>41.871375</lat>
+        <lng>-87.672524</lng>
+        <area>west</area>
+        <depts>
+            <dept>Medicine, College of</dept>
+        </depts>
+    </building>
+    <building id="CMWT">
+        <name>College of Medicine West Tower</name>
+        <lat>41.871368</lat>
+        <lng>-87.673327</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="COMRB">
+        <name>College of Medicine Research Building</name>
+        <lat>41.869883</lat>
+        <lng>-87.67343</lng>
+        <area>west</area>
+        <depts>
+            <dept>Anatomy and Cell Biology, Department of</dept>
+        </depts>
+    </building>
+    <building id="CSB">
+        <name>Clinical Sciences Building</name>
+        <lat>41.870596</lat>
+        <lng>-87.671985</lng>
+        <area>west</area>
+        <depts>
+            <dept>Pediatrics, Department of</dept>
+        </depts>
+    </building>
+    <building id="CSN">
+        <name>Clinical Sciences North</name>
+        <lat>41.870961</lat>
+        <lng>-87.672274</lng>
+        <area>west</area>
+        <depts>
+            <dept>Obstetrics and Gynecology, Department of</dept>
+        </depts>
+    </building>
+    <building id="DENT">
+        <name>College of Dentistry</name>
+        <lat>41.871056</lat>
+        <lng>-87.668425</lng>
+        <area>west</area>
+        <depts>
+            <dept>Dentistry, College of</dept>
+            <dept>Endodontics, Department of</dept>
+            <dept>Oral Biology, Department of</dept>
+            <dept>Oral and Maxillofacial Surgery, Department of</dept>
+            <dept>Oral Medicine and Diagnostic Sciences, Department of</dept>
+            <dept>Orthodontics, Department of</dept>
+            <dept>Pediatric Dentistry, Department of</dept>
+            <dept>Periodontics, Department of</dept>
+            <dept>Restorative Dentistry, Department of</dept>            
+        </depts>
+    </building>
+    <building id="DHSP">
+        <name>Disability, Health and Social Policy Building</name>
+        <lat>41.867465</lat>
+        <lng>-87.667798</lng>
+        <area>west</area>
+        <depts>
+            <dept>Disability and Human Development, Department of</dept>
+        </depts>
+    </building>
+    <building id="EEI">
+        <name>Eye and Ear Infirmary</name>
+        <lat>41.868807</lat>
+        <lng>-87.672996</lng>
+        <area>west</area>
+        <depts>
+            <dept>Illinois Eye and Ear Infirmary, Department of</dept>
+            <dept>Otolaryngology, Department of</dept>
+        </depts>
+    </building>
+    <building id="ESB">
+        <name>Easter Seal Building</name>
+        <lat>41.871822</lat>
+        <lng>-87.677006</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="HRB">
+        <name>Human Resources Building</name>
+        <lat>41.872282</lat>
+        <lng>-87.671199</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LHS">
+        <name>Library of the Health Sciences</name>
+        <lat>41.871827</lat>
+        <lng>-87.670898</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="LIERI">
+        <name>Lions of Illinois Eye Research Institute</name>
+        <lat>41.868859</lat>
+        <lng>-87.674031</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="MAB">
+        <name>Marshfield Avenue Building</name>
+        <lat>41.871317</lat>
+        <lng>-87.667446</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="MBRB">
+        <name>Molecular Biology Research Building</name>
+        <lat>41.871317</lat>
+        <lng>-87.667446</lng>
+        <area>west</area>
+        <depts>
+            <dept>Biochemistry and Molecular Genetics, Department of</dept>
+            <dept>Center for Pharmaceutical Biotechnology</dept>
+        </depts>
+    </building>
+    <building id="MCA">
+        <name>Medical Center Administration Building</name>
+        <lat>41.869925</lat>
+        <lng>-87.672497</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+     <building id="MSB">
+        <name>Medical Sciences Building</name>
+        <lat>41.870576</lat>
+        <lng>-87.673361</lng>
+        <area>west</area>
+        <depts>
+            <dept>Bioengineering, Department of (West)</dept>
+        </depts>
+    </building>
+    <building id="NMRL">
+        <name>NMR Laboratories</name>
+        <lat>41.870568</lat>
+        <lng>-87.67261</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="NPI">
+        <name>Neuropsychiatric Institute</name>
+        <lat>41.869945</lat>
+        <lng>-87.671784</lng>
+        <area>west</area>
+        <depts>
+            <dept>Clinical Cancer Center</dept>
+            <dept>Neurology and Rehabilitation, Department of</dept>
+            <dept>Neurosurgery, Department of</dept>
+        </depts>
+    </building>
+     <building id="NURS">
+        <name>College of Nursing</name>
+        <lat>41.870045</lat>
+        <lng>-87.675367</lng>
+        <area>west</area>
+        <depts>
+            <dept>Nursing, College of</dept>
+        </depts>
+    </building>
+     <building id="OCC">
+        <name>Outpatient Care Center</name>
+        <lat>41.868707</lat>
+        <lng>-87.67195</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="PHARM">
+        <name>College of Pharmacy</name>
+        <lat>41.870556</lat>
+        <lng>-87.670845</lng>
+        <area>west</area>
+        <depts>
+            <dept>Pharmacy, College of</dept>
+            <dept>Biopharmaceutical Sciences, Department of</dept>
+            <dept>Medicinal Chemistry and Pharmacognosy, Department of</dept>
+            <dept>Pharmacy Systems, Outcomes and Policy, Department of</dept>
+            <dept>Pharmacy Practice, Department of</dept>
+            <dept>Institute for Tuberculosis Research</dept>
+        </depts>
+    </building>
+    <building id="PSB">
+        <name>Paulina Street Building</name>
+        <lat>41.867441</lat>
+        <lng>-87.669241</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+       <building id="PSPS">
+        <name>Paulina Street Parking Structure</name>
+        <lat>41.869722</lat>
+        <lng>-87.668361</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="PSRH">
+        <name>Polk Street Residence Hall</name>
+        <lat>41.871132</lat>
+        <lng>-87.675174</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+     <building id="SCW">
+        <name>Student Center West</name>
+        <lat>41.870728</lat>
+        <lng>-87.674536</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+     <building id="SFC">
+        <name>Sport and Fitness Center</name>
+        <lat>41.8706</lat>
+        <lng>-87.675517</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+     <building id="SPHPI">
+        <name>School of Public Health and Psychiatric Institute</name>
+        <lat>41.868651</lat>
+        <lng>-87.667669</lng>
+        <area>west</area>
+        <depts>
+            <dept>Psychiatry, Department of</dept>
+            <dept>Public Health, School of</dept>
+            <dept>Community Health Sciences, Department of</dept>
+            <dept>Epidemiology and Biostatistics, Department of</dept>
+            <dept>Health Policy and Administration, Department of</dept>
+        </depts>
+    </building>
+     <building id="SPHW">
+        <name>School of Public Health West</name>
+        <lat>41.868627</lat>
+        <lng>-87.67924</lng>
+        <area>west</area>
+        <depts>
+            <dept>Environmental and Occupational Health Sciences, Department of</dept>
+        </depts>
+    </building>
+    <building id="SRH">
+        <name>Student Residence Hall</name>
+        <lat>41.871132</lat>
+        <lng>-87.674412</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+     <building id="SSR">
+        <name>Single Student Residence</name>
+        <lat>41.871144</lat>
+        <lng>-87.675662</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="UICH">
+        <name>University of Illinois at Chicago Hospital</name>
+        <lat>41.869789</lat>
+        <lng>-87.670507</lng>
+        <area>west</area>
+        <depts>
+            <dept>Anesthesiology, Department of</dept>
+        </depts>
+    </building>
+    <building id="WROB">
+        <name>Westside Research Office Building</name>
+        <lat>41.866446</lat>
+        <lng>-87.670625</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+     <building id="WSPS">
+        <name>Wood Street Parking Structure</name>
+        <lat>41.868048</lat>
+        <lng>-87.672309</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+    <building id="2242">
+        <name>2242 West Harrison</name>
+        <lat>41.874204</lat>
+        <lng>-87.682685</lng>
+        <area>west</area>
+        <depts>
+        </depts>
+    </building>
+</buildings>

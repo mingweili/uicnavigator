@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application Name -->
+    <string name="app_name">UIC Navigator</string>
+
+    <!-- api resources needed -->
+    <string name="navigation_google_map_url">http://maps.google.com/maps</string>
+
+    <!-- constant values -->
+    <string name="east_campus_lat">41.871795</string>
+    <string name="east_campus_lng">-87.649215</string>
+    <string name="west_campus_lat">41.870553</string>
+    <string name="west_campus_lng">-87.6725795</string>
+
+    <!-- labels of BuildingInfo activity -->
+    <string name="building_info_menu_action_navigate_title">Get Directions</string>
+
+    <!-- labels of Main Activity -->
+    <string name="main_menu_action_show_list_title">Building List</string>
+    <string name="main_menu_action_satellite_switch_title_0">Basic Mode</string>
+    <string name="main_menu_action_satellite_switch_title_1">Satellite Mode</string>
+    <string name="main_menu_action_navigate_title">Directions</string>
+    <string name="main_menu_action_settings_title">Settings</string>
+    <string name="main_menu_action_about_title">About</string>
+
+    <!-- labels of Navigation activity -->
+    <string name="navigation_title">Directions</string>
+    <string name="navigation_from_label">From: </string>
+    <string name="navigation_to_label">To: </string>
+    <string name="navigation_navigate_button_text">Get Directions</string>
+    <string name="navigation_select_building_button_label">Select Building</string>
+    <string name="navigation_my_location_text_placeholder">My Location</string>
+    <string name="navigation_menu_action_navigate_title">Start</string>
+
+    <!-- labels of BuildingInventory activity -->
+    <string name="building_inventory_title">Buildings</string>
+    <string name="building_inventory_action_search_title">Search</string>
+    <string name="building_inventory_search_hint">Buildings, Dept. or Schools</string>
+    <string name="building_inventory_tab_label_east_campus">East Campus</string>
+    <string name="building_inventory_tab_label_west_campus">West Campus</string>
+
+    <!-- labels of Settings Activity -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_default_location_key">pref_defaultLocation</string>
+    <string name="settings_default_location_label">Initial Location</string>
+    <string name="settings_default_location_summary">The default location in map when app starts</string>
+    <string name="settings_default_location_dialog_title">Please choose</string>
+    <string name="settings_default_location_default_value">My Location</string>
+
+    <!-- labels needed in source code for readibility, most of them are intent extra labels -->
+    <string name="EXTRA_MESSAGE_BUILDING_OBJECT">com.mingweili.navigator.extra_messages.main.building_object</string>
+    <string name="EXTRA_MESSAGE_DESTINATION">com.mingweili.navigator.extra_messages.building_info.destination</string>
+    <string name="EXTRA_MESSAGE_START_FOR_RESULT_LABEL">com.mingweili.navigator.extra_messages.navigation.call_for_result_label</string>
+    <string name="EXTRA_MESSAGE_SENT_FROM">com.mingweili.navigator.extra_messages.building_inventory.sent_from</string>
+    <string name="EXTRA_MESSAGE_FROM_OR_TO">com.mingweili.navigator.extra_messages.building_inventory.from_or_to</string>
+
+    <string name="ERROR_MESSAGE_LOCATION_CONNECT">Failed to retrieve your location.</string>
+    <string name="ERROR_MESSAGE_RESOURCE_READING">Failed to read resources.</string>
+    <string name="ERROR_MESSAGE_NAVIGATION_SELECTION">Error in building selection.</string>
+    <string name="ERROR_MESSAGE_INVALID_INPUT">Please specify origin/destination.</string>
+    
+    <!-- some temperary labels unclear -->
+    <string name="placeholder">placeholder</string>
+
+</resources>

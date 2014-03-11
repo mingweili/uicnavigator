@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Application Theme -->
+    <style name="uic_color_theme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/uic_color_action_bar</item>
+        <item name="android:actionBarTabStyle">@style/uic_color_action_bar_tabs</item>
+        <item name="android:actionBarTabTextStyle">@style/uic_color_action_bar_tab_text</item>
+        <item name="android:actionMenuTextColor">@color/uic_white</item>
+        <item name="android:actionOverflowButtonStyle">@style/uic_overflow_button_style</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="uic_color_action_bar"
+           parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/uic_color_action_bar_title_text</item>
+        <item name="android:background">@drawable/actionbar_background</item>
+    </style>
+    
+    <!-- ActionBar title text -->
+    <style name="uic_color_action_bar_title_text"
+           parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/uic_white</item>
+    </style>
+
+    <style name="uic_color_action_bar_tabs"
+           parent="android:Widget.Holo.ActionBar.TabView">
+        <!-- tab indicator -->
+        <item name="android:background">@drawable/tab_indicator_ab_uictheme</item>
+    </style>    
+
+    <!-- ActionBar tabs text styles -->
+    <style name="uic_color_action_bar_tab_text"
+           parent="android:Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">@color/uic_blue</item>
+    </style>
+    
+    <style name="uic_overflow_button_style" parent="android:Widget.Holo.ActionButton.Overflow">
+    	<item name="android:src">@drawable/ic_action_overflow</item>
+	</style>
+    
+</resources>
