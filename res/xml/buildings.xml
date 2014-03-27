@@ -558,8 +558,8 @@
         <depts>
         </depts>
     </building>
-    <building id="ATKINS GARDEN">
-        <name>ATKINS GARDEN</name>
+    <building id="ATKINS_GARDEN">
+        <name>Atkins Garden</name>
         <lat>41.871329</lat>
         <lng>-87.671105</lng>
         <area>west</area>

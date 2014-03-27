@@ -4,6 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BuildingInfoActivity" >
+    
+    <TextView
+        android:id="@+id/building_info_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/building_info_image_imageview"
+        android:text="Building Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <fragment
+        android:id="@+id/building_info_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/building_info_name_textview"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/building_info_name_textview"
+        android:layout_marginTop="50dp"
+        map:uiCompass="false"
+        map:uiRotateGestures="false"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="false"
+        map:uiZoomControls="false"
+        map:uiZoomGestures="true" />
 
     <ImageView
         android:id="@+id/building_info_image_imageview"
@@ -11,42 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         android:src="@drawable/building_image_placeholder" />
-
-    <TextView
-        android:id="@+id/building_info_id_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/building_info_image_imageview"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="30dp"
-        android:text="Building Id"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/building_info_name_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/building_info_id_textview"
-        android:layout_below="@+id/building_info_id_textview"
-        android:layout_marginTop="10dp"
-        android:text="Building Name"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <fragment
-        android:id="@+id/building_info_map"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_width="260dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/building_info_name_textview"
-        android:layout_centerHorizontal="true"
-        map:uiCompass="false"
-        map:uiZoomControls="false"
-        map:uiZoomGestures="true"
-        map:uiScrollGestures="true"
-        map:uiRotateGestures="false"
-        map:uiTiltGestures="false" />
 
 </RelativeLayout>

@@ -36,8 +36,6 @@ public class BuildingInfoActivity extends Activity {
 			= (Building) intent.getSerializableExtra(getResources().getString(R.string.EXTRA_MESSAGE_BUILDING_OBJECT));
 		
 		String buildingId = mBuilding.getId();
-		TextView idTextView = (TextView) findViewById(R.id.building_info_id_textview);
-		idTextView.setText(buildingId);
 		this.setTitle(buildingId);
 		
 		String buildingName = this.mBuilding.getName();
@@ -45,7 +43,14 @@ public class BuildingInfoActivity extends Activity {
 		nameTextView.setText(buildingName);
 		
 		ImageView buildingImage = (ImageView)findViewById(R.id.building_info_image_imageview);
-		buildingImage.setImageResource(R.drawable.building_image_placeholder);
+		String buildingNamePrefix 
+			= this.mBuilding.getArea() == BuildingArea.EAST ? "campus_east_" : "campus_west_";
+		int imageId 
+			= getResources().getIdentifier(buildingNamePrefix + this.mBuilding.getId().toLowerCase(), "drawable", this.getPackageName());
+		if(imageId != 0)
+			buildingImage.setImageResource(imageId);
+		else
+			buildingImage.setImageResource(R.drawable.building_image_placeholder);
 		
 		this.setUpMap();
 	}
