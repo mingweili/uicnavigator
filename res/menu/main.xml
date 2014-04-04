@@ -1,26 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item android:id="@+id/main_menu_action_show_list"
-	     android:icon="@drawable/ic_action_view_as_list"
-	     android:title="@string/main_menu_action_show_list_title"
-	     android:showAsAction="always" />
-    
-    <item android:id="@+id/main_menu_action_navigate"
-        android:icon="@drawable/ic_action_directions"
-	    android:title="@string/main_menu_action_navigate_title"
-	    android:showAsAction="always" />
-    
-    <item android:id="@+id/main_menu_action_satellite_switch" 
-        android:title="@string/main_menu_action_satellite_switch_title_1"
-        android:showAsAction="never" />
-    
-    <item android:id="@+id/main_menu_action_settings"
-        android:title="@string/main_menu_action_settings_title"
+    <item android:id="@+id/campus_map_menu_action_settings"
+        android:title="@string/campus_map_menu_action_settings_title"
         android:showAsAction="never" />
     
     <item
-        android:id="@+id/main_menu_action_about"
-        android:title="@string/main_menu_action_about_title"
+        android:id="@+id/campus_map_menu_action_about"
+        android:title="@string/campus_map_menu_action_about_title"
         android:showAsAction="never" />
 
 </menu>

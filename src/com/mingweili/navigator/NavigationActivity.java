@@ -1,11 +1,14 @@
 package com.mingweili.navigator;
 
 import android.app.Activity;
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,10 +23,13 @@ import com.mingweili.navigator.models.Building;
 
 public class NavigationActivity extends Activity implements
 	GooglePlayServicesClient.ConnectionCallbacks,
-	GooglePlayServicesClient.OnConnectionFailedListener{
+	GooglePlayServicesClient.OnConnectionFailedListener, 
+	// for alert dialog button callbacks
+	GMapAlertFragment.NoticeDialogListener {
 		
 	private double[] mOriginLagLng;
 	private double[] mDestinationLatLng;
+	private String mNavigationUrl;
 	private String mOriginText;
 	private String mDestinationText;
 	private LocationClient mLocationClient;
@@ -121,7 +127,7 @@ public class NavigationActivity extends Activity implements
         }
 	}
 	
-	public void startNavigate() {
+	public void startNavigate(View view) {
 		String originLatLng = "";
 		String destinationLatLng = "";
 		
@@ -129,17 +135,41 @@ public class NavigationActivity extends Activity implements
 			Toast.makeText(this, getString(R.string.ERROR_MESSAGE_INVALID_INPUT), Toast.LENGTH_LONG).show();
 			return;
 		}
+		if(this.mOriginText.equals(this.mDestinationText)) {
+			Toast.makeText(this, getString(R.string.ERROR_MESSAGE_DUPLICATED_INPUT), Toast.LENGTH_LONG).show();
+			return;
+		}
 		
 		originLatLng = String.valueOf(this.mOriginLagLng[0]) + "," + String.valueOf(this.mOriginLagLng[1]);
 		destinationLatLng = String.valueOf(this.mDestinationLatLng[0]) + "," + String.valueOf(this.mDestinationLatLng[1]);
 		
 		//try start google map app to start the navigation
-		String navigationUrl 
+		this.mNavigationUrl 
 			= getResources().getString(R.string.navigation_google_map_url) 
 			+ "?" + "saddr=" + originLatLng 
 			+ "&" + "daddr=" + destinationLatLng;
 		
-		Intent navIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(navigationUrl));
+		// before start the google map, show the instruction if not shown before
+		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+		boolean notShowAgain = preference.getBoolean(getResources().getString(R.string.settings_not_show_alert_key), false);
+		if(!notShowAgain) {
+			DialogFragment dialog = new GMapAlertFragment();
+			dialog.show(this.getFragmentManager(), GMapAlertFragment.class.getName());
+		}
+		
+		else {
+			Intent navIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(this.mNavigationUrl));
+			startActivity(navIntent);
+		}
+	}
+	
+	@Override
+	public void onDialogPositiveClick(boolean notShowChecked) {
+		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+		preference.edit()
+			.putBoolean(getResources().getString(R.string.settings_not_show_alert_key), notShowChecked).commit();
+
+		Intent navIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(this.mNavigationUrl));
 		startActivity(navIntent);
 	}
 	
@@ -184,13 +214,20 @@ public class NavigationActivity extends Activity implements
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle presses on the action bar items
+		Intent intent = new Intent();
 	    switch (item.getItemId()) {
 		    case android.R.id.home:
 		        NavUtils.navigateUpFromSameTask(this);
 		        return true;
-	        case R.id.navigation_menu_action_navigate:
-	        	this.startNavigate();
-	        	return true;
+	        case R.id.campus_map_menu_action_settings:
+	            intent.setClass(this, SettingsActivity.class);
+	            startActivity(intent);
+	            return true;
+	        case R.id.campus_map_menu_action_about:
+	            intent.setClass(this, AboutActivity.class);
+	            startActivity(intent);
+	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }

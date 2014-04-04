@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="uic_blue">#ff1f497d</color>
     <color name="uic_red">#ffff0000</color>
     <color name="uic_white">#ffffffff</color>
     <color name="actionbar_text">#ff000000</color>
+    <color name="blue_bright">#ff1d3dc7</color>
+    <color name="black_overlay">#66000000</color>
+
 </resources>

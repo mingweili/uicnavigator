@@ -16,6 +16,9 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 
@@ -208,13 +211,25 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         this.mSearchView = (SearchView) menu
         		.findItem(R.id.building_inventory_action_search).getActionView();
-        mSearchView.setIconifiedByDefault(false);
-        mSearchView.setSearchableInfo(searchManager
+        this.mSearchView.setSearchableInfo(searchManager
                 .getSearchableInfo(getComponentName()));
-        
         // set up the query change listener to respond to user's query and update the list on the fly
         mSearchView.setOnQueryTextListener(new SearchOnQueryTextListener(this.mSectionsPagerAdapter.getListAdapters()));
         
+        //this.mSearchView.setFocusable(true);
+        this.mSearchView.setIconifiedByDefault(true);
+        //this.mSearchView.requestFocusFromTouch();
+
+        // set the search view text color
+        LinearLayout ll = (LinearLayout)this.mSearchView.getChildAt(0);
+        LinearLayout ll2 = (LinearLayout)ll.getChildAt(2);
+        LinearLayout ll3 = (LinearLayout)ll2.getChildAt(1);
+        AutoCompleteTextView autoComplete = (AutoCompleteTextView)ll3.getChildAt(0);
+        autoComplete.setHintTextColor(getResources().getColor(R.color.uic_white));
+        autoComplete.setTextColor(getResources().getColor(R.color.uic_white));
+	    int searchImgId = getResources().getIdentifier("android:id/search_button", null, null);
+	    ImageView v = (ImageView) mSearchView.findViewById(searchImgId);
+	    v.setImageResource(R.drawable.ic_action_search);
         return true;
 	}
 	
@@ -225,11 +240,11 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 		    case android.R.id.home:
 		        NavUtils.navigateUpFromSameTask(this);
 		        return true;
-	        case R.id.main_menu_action_settings:
+	        case R.id.campus_map_menu_action_settings:
 	            intent.setClass(this, SettingsActivity.class);
 	            startActivity(intent);
 	            return true;
-	        case R.id.main_menu_action_about:
+	        case R.id.campus_map_menu_action_about:
 	            intent.setClass(this, AboutActivity.class);
 	            startActivity(intent);
 	            return true;

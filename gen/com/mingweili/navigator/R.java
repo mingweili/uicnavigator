@@ -47,6 +47,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int adUnitId=0x7f010002;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarButtonStyle=0x7f010012;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarStyle=0x7f010011;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -168,6 +176,8 @@ containing a value of this type.
     }
     public static final class color {
         public static final int actionbar_text=0x7f05000d;
+        public static final int black_overlay=0x7f05000f;
+        public static final int blue_bright=0x7f05000e;
         public static final int common_action_bar_splitter=0x7f050009;
         /**  Sign-in Button Colors 
          */
@@ -180,8 +190,8 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f050006;
         public static final int common_signin_btn_light_text_focused=0x7f050007;
         public static final int common_signin_btn_light_text_pressed=0x7f050005;
-        public static final int common_signin_btn_text_dark=0x7f05000e;
-        public static final int common_signin_btn_text_light=0x7f05000f;
+        public static final int common_signin_btn_text_dark=0x7f050010;
+        public static final int common_signin_btn_text_light=0x7f050011;
         public static final int uic_blue=0x7f05000a;
         public static final int uic_red=0x7f05000b;
         public static final int uic_white=0x7f05000c;
@@ -198,166 +208,194 @@ containing a value of this type.
     }
     public static final class drawable {
         public static final int actionbar_background=0x7f020000;
-        public static final int badge_wa=0x7f020001;
-        public static final int building_image_placeholder=0x7f020002;
-        public static final int campus_east_aa=0x7f020003;
-        public static final int campus_east_adh=0x7f020004;
-        public static final int campus_east_ah=0x7f020005;
-        public static final int campus_east_bh=0x7f020006;
-        public static final int campus_east_bsb=0x7f020007;
-        public static final int campus_east_cuppah=0x7f020008;
-        public static final int campus_east_dh=0x7f020009;
-        public static final int campus_east_epasw=0x7f02000a;
-        public static final int campus_east_erf=0x7f02000b;
-        public static final int campus_east_fac=0x7f02000c;
-        public static final int campus_east_forum=0x7f02000d;
-        public static final int campus_east_gh=0x7f02000e;
-        public static final int campus_east_hh=0x7f02000f;
-        public static final int campus_east_hlps=0x7f020010;
-        public static final int campus_east_hrps=0x7f020011;
-        public static final int campus_east_jah=0x7f020012;
-        public static final int campus_east_jahd=0x7f020013;
-        public static final int campus_east_jh=0x7f020014;
-        public static final int campus_east_jjst=0x7f020015;
-        public static final int campus_east_lca=0x7f020016;
-        public static final int campus_east_lcb=0x7f020017;
-        public static final int campus_east_lcc=0x7f020018;
-        public static final int campus_east_lcd=0x7f020019;
-        public static final int campus_east_lce=0x7f02001a;
-        public static final int campus_east_lcf=0x7f02001b;
-        public static final int campus_east_lh=0x7f02001c;
-        public static final int campus_east_lib=0x7f02001d;
-        public static final int campus_east_mrh=0x7f02001e;
-        public static final int campus_east_pav=0x7f02001f;
-        public static final int campus_east_peb=0x7f020020;
-        public static final int campus_east_prl=0x7f020021;
-        public static final int campus_east_ps=0x7f020022;
-        public static final int campus_east_rrb=0x7f020023;
-        public static final int campus_east_scb=0x7f020024;
-        public static final int campus_east_sce=0x7f020025;
-        public static final int campus_east_scet=0x7f020026;
-        public static final int campus_east_sele=0x7f020027;
-        public static final int campus_east_selw=0x7f020028;
-        public static final int campus_east_seo=0x7f020029;
-        public static final int campus_east_ses=0x7f02002a;
-        public static final int campus_east_sh=0x7f02002b;
-        public static final int campus_east_srcc=0x7f02002c;
-        public static final int campus_east_srcs=0x7f02002d;
-        public static final int campus_east_srcw=0x7f02002e;
-        public static final int campus_east_srf=0x7f02002f;
-        public static final int campus_east_ssb=0x7f020030;
-        public static final int campus_east_tbh=0x7f020031;
-        public static final int campus_east_tf=0x7f020032;
-        public static final int campus_east_th=0x7f020033;
-        public static final int campus_east_uh=0x7f020034;
-        public static final int campus_east_uict=0x7f020035;
-        public static final int campus_west_aob=0x7f020036;
-        public static final int campus_west_atkins_garden=0x7f020037;
-        public static final int campus_west_cfsb=0x7f020038;
-        public static final int campus_west_cmet=0x7f020039;
-        public static final int campus_west_cmw=0x7f02003a;
-        public static final int campus_west_cmwt=0x7f02003b;
-        public static final int campus_west_comrb=0x7f02003c;
-        public static final int campus_west_csn=0x7f02003d;
-        public static final int campus_west_dhsp=0x7f02003e;
-        public static final int campus_west_eei=0x7f02003f;
-        public static final int campus_west_hrb=0x7f020040;
-        public static final int campus_west_lhs=0x7f020041;
-        public static final int campus_west_msb=0x7f020042;
-        public static final int campus_west_nurs=0x7f020043;
-        public static final int campus_west_occ=0x7f020044;
-        public static final int campus_west_pharm=0x7f020045;
-        public static final int campus_west_psb=0x7f020046;
-        public static final int campus_west_psrh=0x7f020047;
-        public static final int campus_west_scw=0x7f020048;
-        public static final int campus_west_sfc=0x7f020049;
-        public static final int campus_west_sphpi=0x7f02004a;
-        public static final int campus_west_srh=0x7f02004b;
-        public static final int campus_west_uich=0x7f02004c;
-        public static final int common_signin_btn_icon_dark=0x7f02004d;
-        public static final int common_signin_btn_icon_disabled_dark=0x7f02004e;
-        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f02004f;
-        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020050;
-        public static final int common_signin_btn_icon_disabled_light=0x7f020051;
-        public static final int common_signin_btn_icon_focus_dark=0x7f020052;
-        public static final int common_signin_btn_icon_focus_light=0x7f020053;
-        public static final int common_signin_btn_icon_light=0x7f020054;
-        public static final int common_signin_btn_icon_normal_dark=0x7f020055;
-        public static final int common_signin_btn_icon_normal_light=0x7f020056;
-        public static final int common_signin_btn_icon_pressed_dark=0x7f020057;
-        public static final int common_signin_btn_icon_pressed_light=0x7f020058;
-        public static final int common_signin_btn_text_dark=0x7f020059;
-        public static final int common_signin_btn_text_disabled_dark=0x7f02005a;
-        public static final int common_signin_btn_text_disabled_focus_dark=0x7f02005b;
-        public static final int common_signin_btn_text_disabled_focus_light=0x7f02005c;
-        public static final int common_signin_btn_text_disabled_light=0x7f02005d;
-        public static final int common_signin_btn_text_focus_dark=0x7f02005e;
-        public static final int common_signin_btn_text_focus_light=0x7f02005f;
-        public static final int common_signin_btn_text_light=0x7f020060;
-        public static final int common_signin_btn_text_normal_dark=0x7f020061;
-        public static final int common_signin_btn_text_normal_light=0x7f020062;
-        public static final int common_signin_btn_text_pressed_dark=0x7f020063;
-        public static final int common_signin_btn_text_pressed_light=0x7f020064;
-        public static final int custom_info_bubble=0x7f020065;
-        public static final int ic_action_directions=0x7f020066;
-        public static final int ic_action_location_found=0x7f020067;
-        public static final int ic_action_overflow=0x7f020068;
-        public static final int ic_action_search=0x7f020069;
-        public static final int ic_action_view_as_list=0x7f02006a;
-        public static final int ic_launcher=0x7f02006b;
-        public static final int ic_launcher_white=0x7f02006c;
-        public static final int ic_plusone_medium_off_client=0x7f02006d;
-        public static final int ic_plusone_small_off_client=0x7f02006e;
-        public static final int ic_plusone_standard_off_client=0x7f02006f;
-        public static final int ic_plusone_tall_off_client=0x7f020070;
-        public static final int info_window_bldg_thumbnail=0x7f020071;
-        public static final int info_window_bldg_thumbnail_placeholder=0x7f020072;
-        public static final int tab_indicator_ab_uictheme=0x7f020073;
-        public static final int tab_selected_focused_uictheme=0x7f020074;
-        public static final int tab_selected_pressed_uictheme=0x7f020075;
-        public static final int tab_selected_uictheme=0x7f020076;
-        public static final int tab_unselected_focused_uictheme=0x7f020077;
-        public static final int tab_unselected_pressed_uictheme=0x7f020078;
-        public static final int tab_unselected_uictheme=0x7f020079;
+        public static final int alert_instruction_screenshot=0x7f020001;
+        public static final int badge_wa=0x7f020002;
+        public static final int building_image_placeholder=0x7f020003;
+        public static final int campus_east_aa=0x7f020004;
+        public static final int campus_east_adh=0x7f020005;
+        public static final int campus_east_ah=0x7f020006;
+        public static final int campus_east_bh=0x7f020007;
+        public static final int campus_east_bsb=0x7f020008;
+        public static final int campus_east_cuppah=0x7f020009;
+        public static final int campus_east_dh=0x7f02000a;
+        public static final int campus_east_epasw=0x7f02000b;
+        public static final int campus_east_erf=0x7f02000c;
+        public static final int campus_east_fac=0x7f02000d;
+        public static final int campus_east_forum=0x7f02000e;
+        public static final int campus_east_gh=0x7f02000f;
+        public static final int campus_east_hh=0x7f020010;
+        public static final int campus_east_hlps=0x7f020011;
+        public static final int campus_east_hrps=0x7f020012;
+        public static final int campus_east_jah=0x7f020013;
+        public static final int campus_east_jahd=0x7f020014;
+        public static final int campus_east_jh=0x7f020015;
+        public static final int campus_east_jjst=0x7f020016;
+        public static final int campus_east_lca=0x7f020017;
+        public static final int campus_east_lcb=0x7f020018;
+        public static final int campus_east_lcc=0x7f020019;
+        public static final int campus_east_lcd=0x7f02001a;
+        public static final int campus_east_lce=0x7f02001b;
+        public static final int campus_east_lcf=0x7f02001c;
+        public static final int campus_east_lh=0x7f02001d;
+        public static final int campus_east_lib=0x7f02001e;
+        public static final int campus_east_mrh=0x7f02001f;
+        public static final int campus_east_pav=0x7f020020;
+        public static final int campus_east_peb=0x7f020021;
+        public static final int campus_east_prl=0x7f020022;
+        public static final int campus_east_ps=0x7f020023;
+        public static final int campus_east_rrb=0x7f020024;
+        public static final int campus_east_scb=0x7f020025;
+        public static final int campus_east_sce=0x7f020026;
+        public static final int campus_east_scet=0x7f020027;
+        public static final int campus_east_sele=0x7f020028;
+        public static final int campus_east_selw=0x7f020029;
+        public static final int campus_east_seo=0x7f02002a;
+        public static final int campus_east_ses=0x7f02002b;
+        public static final int campus_east_sh=0x7f02002c;
+        public static final int campus_east_srcc=0x7f02002d;
+        public static final int campus_east_srcs=0x7f02002e;
+        public static final int campus_east_srcw=0x7f02002f;
+        public static final int campus_east_srf=0x7f020030;
+        public static final int campus_east_ssb=0x7f020031;
+        public static final int campus_east_tbh=0x7f020032;
+        public static final int campus_east_tf=0x7f020033;
+        public static final int campus_east_th=0x7f020034;
+        public static final int campus_east_uh=0x7f020035;
+        public static final int campus_east_uict=0x7f020036;
+        public static final int campus_west_aob=0x7f020037;
+        public static final int campus_west_atkins_garden=0x7f020038;
+        public static final int campus_west_cfsb=0x7f020039;
+        public static final int campus_west_cmet=0x7f02003a;
+        public static final int campus_west_cmw=0x7f02003b;
+        public static final int campus_west_cmwt=0x7f02003c;
+        public static final int campus_west_comrb=0x7f02003d;
+        public static final int campus_west_csn=0x7f02003e;
+        public static final int campus_west_dhsp=0x7f02003f;
+        public static final int campus_west_eei=0x7f020040;
+        public static final int campus_west_hrb=0x7f020041;
+        public static final int campus_west_lhs=0x7f020042;
+        public static final int campus_west_msb=0x7f020043;
+        public static final int campus_west_nurs=0x7f020044;
+        public static final int campus_west_occ=0x7f020045;
+        public static final int campus_west_pharm=0x7f020046;
+        public static final int campus_west_psb=0x7f020047;
+        public static final int campus_west_psrh=0x7f020048;
+        public static final int campus_west_scw=0x7f020049;
+        public static final int campus_west_sfc=0x7f02004a;
+        public static final int campus_west_sphpi=0x7f02004b;
+        public static final int campus_west_srh=0x7f02004c;
+        public static final int campus_west_uich=0x7f02004d;
+        public static final int common_signin_btn_icon_dark=0x7f02004e;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f02004f;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020050;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020051;
+        public static final int common_signin_btn_icon_disabled_light=0x7f020052;
+        public static final int common_signin_btn_icon_focus_dark=0x7f020053;
+        public static final int common_signin_btn_icon_focus_light=0x7f020054;
+        public static final int common_signin_btn_icon_light=0x7f020055;
+        public static final int common_signin_btn_icon_normal_dark=0x7f020056;
+        public static final int common_signin_btn_icon_normal_light=0x7f020057;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f020058;
+        public static final int common_signin_btn_icon_pressed_light=0x7f020059;
+        public static final int common_signin_btn_text_dark=0x7f02005a;
+        public static final int common_signin_btn_text_disabled_dark=0x7f02005b;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f02005c;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f02005d;
+        public static final int common_signin_btn_text_disabled_light=0x7f02005e;
+        public static final int common_signin_btn_text_focus_dark=0x7f02005f;
+        public static final int common_signin_btn_text_focus_light=0x7f020060;
+        public static final int common_signin_btn_text_light=0x7f020061;
+        public static final int common_signin_btn_text_normal_dark=0x7f020062;
+        public static final int common_signin_btn_text_normal_light=0x7f020063;
+        public static final int common_signin_btn_text_pressed_dark=0x7f020064;
+        public static final int common_signin_btn_text_pressed_light=0x7f020065;
+        public static final int custom_info_bubble=0x7f020066;
+        public static final int ic_action_directions=0x7f020067;
+        public static final int ic_action_location_found=0x7f020068;
+        public static final int ic_action_overflow=0x7f020069;
+        public static final int ic_action_search=0x7f02006a;
+        public static final int ic_action_view_as_list=0x7f02006b;
+        public static final int ic_launcher=0x7f02006c;
+        public static final int ic_launcher_white=0x7f02006d;
+        public static final int ic_plusone_medium_off_client=0x7f02006e;
+        public static final int ic_plusone_small_off_client=0x7f02006f;
+        public static final int ic_plusone_standard_off_client=0x7f020070;
+        public static final int ic_plusone_tall_off_client=0x7f020071;
+        public static final int info_window_bldg_thumbnail=0x7f020072;
+        public static final int main_action_1_origin=0x7f020073;
+        public static final int main_action_1_pressed=0x7f020074;
+        public static final int main_action_1_selector=0x7f020075;
+        public static final int main_action_2_origin=0x7f020076;
+        public static final int main_action_2_pressed=0x7f020077;
+        public static final int main_action_2_selector=0x7f020078;
+        public static final int main_action_3_origin=0x7f020079;
+        public static final int main_action_3_pressed=0x7f02007a;
+        public static final int main_action_3_selector=0x7f02007b;
+        public static final int navigation_button_origin=0x7f02007c;
+        public static final int navigation_button_pressed=0x7f02007d;
+        public static final int navigation_button_selector=0x7f02007e;
+        public static final int tab_indicator_ab_uictheme=0x7f02007f;
+        public static final int tab_selected_focused_uictheme=0x7f020080;
+        public static final int tab_selected_pressed_uictheme=0x7f020081;
+        public static final int tab_selected_uictheme=0x7f020082;
+        public static final int tab_unselected_focused_uictheme=0x7f020083;
+        public static final int tab_unselected_pressed_uictheme=0x7f020084;
+        public static final int tab_unselected_uictheme=0x7f020085;
+        public static final int welcome_background_image=0x7f020086;
+        public static final int welcome_logo=0x7f020087;
     }
     public static final class id {
         public static final int about_app_icon_imageview=0x7f060006;
         public static final int about_app_name_version_textview=0x7f060007;
         public static final int about_copyright_textview=0x7f060005;
+        public static final int alert_instruction_label_textview=0x7f060029;
+        public static final int alert_instruction_screenshot_imageview=0x7f06002a;
+        public static final int alert_not_show_again_checkbox=0x7f06002b;
         public static final int building_info_image_imageview=0x7f060009;
         public static final int building_info_map=0x7f06000a;
-        public static final int building_info_menu_action_navigate=0x7f06001d;
+        public static final int building_info_menu_action_navigate=0x7f06002c;
         public static final int building_info_name_textview=0x7f060008;
-        public static final int building_inventory_action_search=0x7f060020;
-        public static final int building_inventory_list=0x7f06001c;
+        public static final int building_inventory_action_search=0x7f06002f;
+        public static final int building_inventory_list=0x7f060028;
+        public static final int campus_map_menu_action_about=0x7f06002e;
+        public static final int campus_map_menu_action_navigate=0x7f060031;
+        public static final int campus_map_menu_action_satellite_switch=0x7f060032;
+        public static final int campus_map_menu_action_settings=0x7f06002d;
+        public static final int campus_map_menu_action_show_list=0x7f060030;
         public static final int campus_tabs_pager=0x7f06000b;
         public static final int hybrid=0x7f060004;
-        public static final int info_window_bldg_id=0x7f060017;
-        public static final int info_window_bldg_name=0x7f060018;
-        public static final int info_window_bldg_thumbnail=0x7f060016;
-        public static final int list_row_depts=0x7f06001b;
-        public static final int list_row_desc=0x7f06001a;
-        public static final int list_row_title=0x7f060019;
-        public static final int main_menu_action_about=0x7f06001f;
-        public static final int main_menu_action_navigate=0x7f060022;
-        public static final int main_menu_action_satellite_switch=0x7f060023;
-        public static final int main_menu_action_settings=0x7f06001e;
-        public static final int main_menu_action_show_list=0x7f060021;
+        public static final int info_window_bldg_id=0x7f060023;
+        public static final int info_window_bldg_name=0x7f060024;
+        public static final int info_window_bldg_thumbnail=0x7f060022;
+        public static final int list_row_depts=0x7f060027;
+        public static final int list_row_desc=0x7f060026;
+        public static final int list_row_title=0x7f060025;
+        public static final int main_action_1_imageview=0x7f06000e;
+        public static final int main_action_2_imageview=0x7f06000f;
+        public static final int main_action_3_imageview=0x7f060010;
+        public static final int main_header_textview=0x7f06000d;
         public static final int map=0x7f06000c;
-        public static final int navigation_from_edittext=0x7f06000e;
-        public static final int navigation_from_label_textview=0x7f06000d;
-        public static final int navigation_locate_from_imagebutton=0x7f06000f;
-        public static final int navigation_locate_to_imagebutton=0x7f060012;
-        public static final int navigation_menu_action_navigate=0x7f060024;
-        public static final int navigation_select_from_button=0x7f060010;
-        public static final int navigation_select_to_button=0x7f060014;
-        public static final int navigation_to_edittext=0x7f060013;
-        public static final int navigation_to_label_textview=0x7f060011;
+        public static final int navigation_from_edittext=0x7f060012;
+        public static final int navigation_from_label_textview=0x7f060011;
+        public static final int navigation_locate_from_imagebutton=0x7f060013;
+        public static final int navigation_locate_to_imagebutton=0x7f060017;
+        public static final int navigation_navigate_imageview=0x7f060019;
+        public static final int navigation_select_from_button=0x7f060014;
+        public static final int navigation_select_to_button=0x7f060018;
+        public static final int navigation_to_edittext=0x7f060016;
+        public static final int navigation_to_label_textview=0x7f060015;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int satellite=0x7f060002;
-        public static final int settings_fragment=0x7f060015;
+        public static final int settings_fragment=0x7f06001a;
         public static final int terrain=0x7f060003;
+        public static final int welcome_author_name_textview=0x7f06001e;
+        public static final int welcome_cs_name_textview=0x7f06001d;
+        public static final int welcome_logo_imageview=0x7f06001b;
+        public static final int welcome_start_button=0x7f060021;
+        public static final int welcome_supervised_by_textview=0x7f06001f;
+        public static final int welcome_supervisor_textview=0x7f060020;
+        public static final int welcome_uic_name_textview=0x7f06001c;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
@@ -367,36 +405,49 @@ containing a value of this type.
         public static final int activity_about=0x7f030000;
         public static final int activity_building_info=0x7f030001;
         public static final int activity_building_inventory=0x7f030002;
-        public static final int activity_main=0x7f030003;
-        public static final int activity_navigation=0x7f030004;
-        public static final int activity_settings=0x7f030005;
-        public static final int custom_info_window=0x7f030006;
-        public static final int custom_list_row=0x7f030007;
-        public static final int fragment_campus_list=0x7f030008;
+        public static final int activity_campus_map=0x7f030003;
+        public static final int activity_main=0x7f030004;
+        public static final int activity_navigation=0x7f030005;
+        public static final int activity_settings=0x7f030006;
+        public static final int activity_welcome=0x7f030007;
+        public static final int custom_info_window=0x7f030008;
+        public static final int custom_list_row=0x7f030009;
+        public static final int fragment_campus_list=0x7f03000a;
+        public static final int fragment_gmap_alert=0x7f03000b;
     }
     public static final class menu {
         public static final int building_info=0x7f0c0000;
         public static final int building_inventory=0x7f0c0001;
-        public static final int main=0x7f0c0002;
-        public static final int navigation=0x7f0c0003;
+        public static final int campus_map=0x7f0c0002;
+        public static final int main=0x7f0c0003;
+        public static final int navigation=0x7f0c0004;
     }
     public static final class string {
-        public static final int ERROR_MESSAGE_INVALID_INPUT=0x7f070044;
-        public static final int ERROR_MESSAGE_LOCATION_CONNECT=0x7f070041;
-        public static final int ERROR_MESSAGE_NAVIGATION_SELECTION=0x7f070043;
-        public static final int ERROR_MESSAGE_RESOURCE_READING=0x7f070042;
+        public static final int ERROR_MESSAGE_DUPLICATED_INPUT=0x7f070053;
+        public static final int ERROR_MESSAGE_INVALID_INPUT=0x7f070052;
+        /**  error messages 
+         */
+        public static final int ERROR_MESSAGE_LOCATION_CONNECT=0x7f07004f;
+        public static final int ERROR_MESSAGE_NAVIGATION_SELECTION=0x7f070051;
+        public static final int ERROR_MESSAGE_RESOURCE_READING=0x7f070050;
         /**  labels needed in source code for readibility, most of them are intent extra labels 
          */
-        public static final int EXTRA_MESSAGE_BUILDING_OBJECT=0x7f07003c;
-        public static final int EXTRA_MESSAGE_DESTINATION=0x7f07003d;
-        public static final int EXTRA_MESSAGE_FROM_OR_TO=0x7f070040;
-        public static final int EXTRA_MESSAGE_SENT_FROM=0x7f07003f;
-        public static final int EXTRA_MESSAGE_START_FOR_RESULT_LABEL=0x7f07003e;
-        public static final int about_app_name_version=0x7f07003b;
-        public static final int about_copyright_label=0x7f07003a;
+        public static final int EXTRA_MESSAGE_BUILDING_OBJECT=0x7f07004a;
+        public static final int EXTRA_MESSAGE_DESTINATION=0x7f07004b;
+        public static final int EXTRA_MESSAGE_FROM_OR_TO=0x7f07004e;
+        public static final int EXTRA_MESSAGE_SENT_FROM=0x7f07004d;
+        public static final int EXTRA_MESSAGE_START_FOR_RESULT_LABEL=0x7f07004c;
+        public static final int about_app_name_version=0x7f070047;
+        public static final int about_copyright_label=0x7f070046;
         /**  labels of About activity 
          */
-        public static final int about_title=0x7f070039;
+        public static final int about_title=0x7f070045;
+        public static final int alert_cancel_label=0x7f070038;
+        public static final int alert_confirm_label=0x7f070039;
+        /**  labels of Gmaps alert fragment 
+         */
+        public static final int alert_instruction=0x7f070036;
+        public static final int alert_not_show_again_label=0x7f070037;
         /**  Application Name 
          */
         public static final int app_name=0x7f07001a;
@@ -425,14 +476,23 @@ containing a value of this type.
         public static final int auth_client_using_bad_version_title=0x7f070014;
         /**  labels of BuildingInfo activity 
          */
-        public static final int building_info_menu_action_navigate_title=0x7f070020;
-        public static final int building_inventory_action_search_title=0x7f07002f;
-        public static final int building_inventory_search_hint=0x7f070030;
-        public static final int building_inventory_tab_label_east_campus=0x7f070031;
-        public static final int building_inventory_tab_label_west_campus=0x7f070032;
+        public static final int building_info_menu_action_navigate_title=0x7f070027;
+        public static final int building_inventory_action_search_title=0x7f07003b;
+        public static final int building_inventory_search_hint=0x7f07003c;
+        public static final int building_inventory_tab_label_east_campus=0x7f07003d;
+        public static final int building_inventory_tab_label_west_campus=0x7f07003e;
         /**  labels of BuildingInventory activity 
          */
-        public static final int building_inventory_title=0x7f07002e;
+        public static final int building_inventory_title=0x7f07003a;
+        public static final int campus_map_menu_action_about_title=0x7f07002e;
+        public static final int campus_map_menu_action_navigate_title=0x7f07002c;
+        public static final int campus_map_menu_action_satellite_switch_title_0=0x7f07002a;
+        public static final int campus_map_menu_action_satellite_switch_title_1=0x7f07002b;
+        public static final int campus_map_menu_action_settings_title=0x7f07002d;
+        public static final int campus_map_menu_action_show_list_title=0x7f070029;
+        /**  labels of CampusMap Activity 
+         */
+        public static final int campus_map_title=0x7f070028;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -508,37 +568,44 @@ containing a value of this type.
          */
         public static final int east_campus_lat=0x7f07001c;
         public static final int east_campus_lng=0x7f07001d;
-        public static final int main_menu_action_about_title=0x7f070026;
-        public static final int main_menu_action_navigate_title=0x7f070024;
-        public static final int main_menu_action_satellite_switch_title_0=0x7f070022;
-        public static final int main_menu_action_satellite_switch_title_1=0x7f070023;
-        public static final int main_menu_action_settings_title=0x7f070025;
         /**  labels of Main Activity 
          */
-        public static final int main_menu_action_show_list_title=0x7f070021;
-        public static final int navigation_from_label=0x7f070028;
+        public static final int main_header_text=0x7f070026;
+        public static final int navigation_from_label=0x7f070030;
         /**  api resources needed 
          */
         public static final int navigation_google_map_url=0x7f07001b;
-        public static final int navigation_menu_action_navigate_title=0x7f07002d;
-        public static final int navigation_my_location_text_placeholder=0x7f07002c;
-        public static final int navigation_navigate_button_text=0x7f07002a;
-        public static final int navigation_select_building_button_label=0x7f07002b;
+        public static final int navigation_menu_action_navigate_title=0x7f070035;
+        public static final int navigation_my_location_text_placeholder=0x7f070034;
+        public static final int navigation_navigate_button_text=0x7f070032;
+        public static final int navigation_select_building_button_label=0x7f070033;
         /**  labels of Navigation activity 
          */
-        public static final int navigation_title=0x7f070027;
-        public static final int navigation_to_label=0x7f070029;
+        public static final int navigation_title=0x7f07002f;
+        public static final int navigation_to_label=0x7f070031;
         /**  some temperary labels unclear 
          */
-        public static final int placeholder=0x7f070045;
-        public static final int settings_default_location_default_value=0x7f070038;
-        public static final int settings_default_location_dialog_title=0x7f070037;
-        public static final int settings_default_location_key=0x7f070034;
-        public static final int settings_default_location_label=0x7f070035;
-        public static final int settings_default_location_summary=0x7f070036;
+        public static final int placeholder=0x7f070054;
+        public static final int settings_default_location_default_value=0x7f070044;
+        public static final int settings_default_location_dialog_title=0x7f070043;
+        public static final int settings_default_location_key=0x7f070040;
+        public static final int settings_default_location_label=0x7f070041;
+        public static final int settings_default_location_summary=0x7f070042;
+        /**  labels of Preferences keys 
+         */
+        public static final int settings_not_show_alert_key=0x7f070048;
+        public static final int settings_not_show_welcome_key=0x7f070049;
         /**  labels of Settings Activity 
          */
-        public static final int settings_title=0x7f070033;
+        public static final int settings_title=0x7f07003f;
+        public static final int welcome_author_label=0x7f070022;
+        public static final int welcome_cs_name_label=0x7f070021;
+        public static final int welcome_start_button_label=0x7f070025;
+        public static final int welcome_supervised_by_label=0x7f070023;
+        public static final int welcome_supervisor_by_label=0x7f070024;
+        /**  labels of Welcome Activity 
+         */
+        public static final int welcome_uic_name_label=0x7f070020;
         public static final int west_campus_lat=0x7f07001e;
         public static final int west_campus_lng=0x7f07001f;
     }
@@ -546,6 +613,7 @@ containing a value of this type.
         /** 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
+
     
  API 11 theme customizations can go here. 
 
@@ -555,7 +623,10 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f0b0006;
+        public static final int AppBaseTheme=0x7f0b0009;
+        public static final int ButtonBar=0x7f0b0007;
+        public static final int ButtonBarButton=0x7f0b0008;
+        public static final int FullscreenTheme=0x7f0b0006;
         /**  ActionBar styles 
          */
         public static final int uic_color_action_bar=0x7f0b0001;
@@ -652,6 +723,46 @@ containing a value of this type.
           @attr name com.mingweili.navigator:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
+        /** 
+         Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels.
+    
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarButtonStyle com.mingweili.navigator:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarStyle com.mingweili.navigator:buttonBarStyle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonBarContainerTheme_buttonBarButtonStyle
+           @see #ButtonBarContainerTheme_buttonBarStyle
+         */
+        public static final int[] ButtonBarContainerTheme = {
+            0x7f010011, 0x7f010012
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.mingweili.navigator.R.attr#buttonBarButtonStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.mingweili.navigator:buttonBarButtonStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.mingweili.navigator.R.attr#buttonBarStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.mingweili.navigator:buttonBarStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
         /** Attributes that can be used with a MapAttrs.
            <p>Includes the following attributes:</p>
            <table>

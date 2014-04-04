@@ -12,17 +12,28 @@
     <string name="east_campus_lng">-87.649215</string>
     <string name="west_campus_lat">41.870553</string>
     <string name="west_campus_lng">-87.6725795</string>
+    
+    <!-- labels of Welcome Activity -->
+    <string name="welcome_uic_name_label">University of Illinois at Chicago</string>
+    <string name="welcome_cs_name_label">Department of Computer Science</string>
+    <string name="welcome_author_label">Mingwei Li</string>
+    <string name="welcome_supervised_by_label">Supervised by</string>
+    <string name="welcome_supervisor_by_label">Prof. Ugo Buy</string>
+    <string name="welcome_start_button_label">Get Started!</string>
 
+    <!-- labels of Main Activity -->
+    <string name="main_header_text">Please choose&#8230;</string>
     <!-- labels of BuildingInfo activity -->
     <string name="building_info_menu_action_navigate_title">Get Directions</string>
 
-    <!-- labels of Main Activity -->
-    <string name="main_menu_action_show_list_title">Building List</string>
-    <string name="main_menu_action_satellite_switch_title_0">Basic Mode</string>
-    <string name="main_menu_action_satellite_switch_title_1">Satellite Mode</string>
-    <string name="main_menu_action_navigate_title">Directions</string>
-    <string name="main_menu_action_settings_title">Settings</string>
-    <string name="main_menu_action_about_title">About</string>
+    <!-- labels of CampusMap Activity -->
+    <string name="campus_map_title">Campus Map</string>
+    <string name="campus_map_menu_action_satellite_switch_title_0">Basic Mode</string>
+    <string name="campus_map_menu_action_satellite_switch_title_1">Satellite Mode</string>
+    <string name="campus_map_menu_action_show_list_title">Search Buildings</string>
+    <string name="campus_map_menu_action_navigate_title">Get Directions</string>
+    <string name="campus_map_menu_action_settings_title">Settings</string>
+    <string name="campus_map_menu_action_about_title">About</string>
 
     <!-- labels of Navigation activity -->
     <string name="navigation_title">Directions</string>
@@ -33,10 +44,16 @@
     <string name="navigation_my_location_text_placeholder">My Location</string>
     <string name="navigation_menu_action_navigate_title">Start</string>
 
+    <!-- labels of Gmaps alert fragment -->
+    <string name="alert_instruction">This will brings you to native Google Maps app or Google Maps website version if it\'s not installed on your device. You are free to change travel modes (as shown below) or any other options inside Google Maps. To go back to UIC Navigator, please use Back button on device or Android multi-tasking.</string>
+    <string name="alert_not_show_again_label">Do not show this again</string>
+    <string name="alert_cancel_label">Cancel</string>
+    <string name="alert_confirm_label">OK</string>
+
     <!-- labels of BuildingInventory activity -->
     <string name="building_inventory_title">Buildings</string>
     <string name="building_inventory_action_search_title">Search</string>
-    <string name="building_inventory_search_hint">Buildings, Dept. or Schools</string>
+    <string name="building_inventory_search_hint">buildings, dept. or schools</string>
     <string name="building_inventory_tab_label_east_campus">East Campus</string>
     <string name="building_inventory_tab_label_west_campus">West Campus</string>
 
@@ -44,25 +61,32 @@
     <string name="settings_title">Settings</string>
     <string name="settings_default_location_key">pref_defaultLocation</string>
     <string name="settings_default_location_label">Initial Location</string>
-    <string name="settings_default_location_summary">The default location in map when app starts</string>
+    <string name="settings_default_location_summary">The default location in map when map loaded</string>
     <string name="settings_default_location_dialog_title">Please choose</string>
     <string name="settings_default_location_default_value">My Location</string>
-    
+
     <!-- labels of About activity -->
     <string name="about_title">About</string>
     <string name="about_copyright_label">© 2014 Mingwei Li</string>
     <string name="about_app_name_version">UIC Navigator 1.0</string>
 
+    <!-- labels of Preferences keys -->
+    <string name="settings_not_show_alert_key">pref_notShowAlert</string>
+    <string name="settings_not_show_welcome_key">pref_notShowWelcome</string>
+    
     <!-- labels needed in source code for readibility, most of them are intent extra labels -->
     <string name="EXTRA_MESSAGE_BUILDING_OBJECT">com.mingweili.navigator.extra_messages.main.building_object</string>
     <string name="EXTRA_MESSAGE_DESTINATION">com.mingweili.navigator.extra_messages.building_info.destination</string>
     <string name="EXTRA_MESSAGE_START_FOR_RESULT_LABEL">com.mingweili.navigator.extra_messages.navigation.call_for_result_label</string>
     <string name="EXTRA_MESSAGE_SENT_FROM">com.mingweili.navigator.extra_messages.building_inventory.sent_from</string>
     <string name="EXTRA_MESSAGE_FROM_OR_TO">com.mingweili.navigator.extra_messages.building_inventory.from_or_to</string>
-    <string name="ERROR_MESSAGE_LOCATION_CONNECT">Failed to retrieve your location.</string>
-    <string name="ERROR_MESSAGE_RESOURCE_READING">Failed to read resources.</string>
-    <string name="ERROR_MESSAGE_NAVIGATION_SELECTION">Error in building selection.</string>
-    <string name="ERROR_MESSAGE_INVALID_INPUT">Please specify origin/destination.</string>
+
+    <!-- error messages -->
+    <string name="ERROR_MESSAGE_LOCATION_CONNECT">Failed to retrieve your location</string>
+    <string name="ERROR_MESSAGE_RESOURCE_READING">Failed to read resources</string>
+    <string name="ERROR_MESSAGE_NAVIGATION_SELECTION">Error in building selection</string>
+    <string name="ERROR_MESSAGE_INVALID_INPUT">Please specify origin/destination</string>
+    <string name="ERROR_MESSAGE_DUPLICATED_INPUT">Invalid origin/destination</string>
 
     <!-- some temperary labels unclear -->
     <string name="placeholder">placeholder</string>

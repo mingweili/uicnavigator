@@ -1,4 +1,5 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Application Theme -->
     <style name="uic_color_theme" parent="android:Theme.Holo.Light">
@@ -10,32 +11,46 @@
     </style>
 
     <!-- ActionBar styles -->
-    <style name="uic_color_action_bar"
-           parent="android:Widget.Holo.Light.ActionBar">
+    <style name="uic_color_action_bar" parent="android:Widget.Holo.Light.ActionBar">
         <item name="android:titleTextStyle">@style/uic_color_action_bar_title_text</item>
         <item name="android:background">@drawable/actionbar_background</item>
     </style>
-    
+
     <!-- ActionBar title text -->
-    <style name="uic_color_action_bar_title_text"
-           parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+    <style name="uic_color_action_bar_title_text" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColor">@color/uic_white</item>
     </style>
 
-    <style name="uic_color_action_bar_tabs"
-           parent="android:Widget.Holo.ActionBar.TabView">
+    <style name="uic_color_action_bar_tabs" parent="android:Widget.Holo.ActionBar.TabView">
+
         <!-- tab indicator -->
         <item name="android:background">@drawable/tab_indicator_ab_uictheme</item>
-    </style>    
+    </style>
 
     <!-- ActionBar tabs text styles -->
-    <style name="uic_color_action_bar_tab_text"
-           parent="android:Widget.Holo.ActionBar.TabText">
+    <style name="uic_color_action_bar_tab_text" parent="android:Widget.Holo.ActionBar.TabText">
         <item name="android:textColor">@color/uic_blue</item>
     </style>
-    
+
     <style name="uic_overflow_button_style" parent="android:Widget.Holo.ActionButton.Overflow">
-    	<item name="android:src">@drawable/ic_action_overflow</item>
-	</style>
-    
+        <item name="android:src">@drawable/ic_action_overflow</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
+
 </resources>

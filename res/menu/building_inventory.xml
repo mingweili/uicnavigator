@@ -7,12 +7,12 @@
 	      android:showAsAction="always"
 	      android:actionViewClass="android.widget.SearchView"/>
 	
-	<item android:id="@+id/main_menu_action_settings"
-        android:title="@string/main_menu_action_settings_title"
+	<item android:id="@+id/campus_map_menu_action_settings"
+        android:title="@string/campus_map_menu_action_settings_title"
         android:showAsAction="never" />
     
     <item
-        android:id="@+id/main_menu_action_about"
-        android:title="@string/main_menu_action_about_title"
+        android:id="@+id/campus_map_menu_action_about"
+        android:title="@string/campus_map_menu_action_about_title"
         android:showAsAction="never" />
 </menu>

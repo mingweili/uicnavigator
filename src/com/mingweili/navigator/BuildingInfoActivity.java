@@ -100,11 +100,11 @@ public class BuildingInfoActivity extends Activity {
 	    	case R.id.building_info_menu_action_navigate:
 	    		this.sendToNavigate();
 	    		return true;
-	        case R.id.main_menu_action_settings:
+	        case R.id.campus_map_menu_action_settings:
 	            intent.setClass(this, SettingsActivity.class);
 	            startActivity(intent);
 	            return true;
-	        case R.id.main_menu_action_about:
+	        case R.id.campus_map_menu_action_about:
 	            intent.setClass(this, AboutActivity.class);
 	            startActivity(intent);
 	            return true;
