@@ -10,8 +10,14 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
+/**
+ * Activity of Settings screen.
+ */
 public class SettingsActivity extends PreferenceActivity
 	implements OnSharedPreferenceChangeListener {
+	/**
+	 * Fragment of Settings panel
+	 */
 	public static class SettingsFragment extends PreferenceFragment {
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
@@ -27,13 +33,16 @@ public class SettingsActivity extends PreferenceActivity
 		super.onCreate(savedInstanceState);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
-		// Load the preferences from an XML resource
+		// Load the preferences from an XML resource.
+		// Add Settings Fragment.
 		getFragmentManager().beginTransaction()
-        .replace(android.R.id.content, new SettingsFragment())
-        .commit();
+        	.replace(android.R.id.content, new SettingsFragment())
+        	.commit();
     }
 	
-	// register preference change listener in onResume callback as recommended by m, guide
+	/** 
+	 * Register preference change listener in onResume callback as recommended by official guide
+	 */
 	@Override
 	protected void onResume() {
 	    super.onResume();
@@ -41,6 +50,9 @@ public class SettingsActivity extends PreferenceActivity
     		.registerOnSharedPreferenceChangeListener(this);
 	}
 	
+	/**
+	 * Method of defining menu items
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
@@ -52,9 +64,12 @@ public class SettingsActivity extends PreferenceActivity
 	    return super.onOptionsItemSelected(item);
 	}
 
+	/**
+	 * Method responding setting changes
+	 */
 	@Override
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-		// respond to settings changes: open campus map immediately
+		// Respond to settings changes: open campus map immediately
 		if(key.equals(getResources().getString(R.string.settings_default_location_key))) {
 			Intent intent = new Intent(this, CampusMapActivity.class);
 			startActivity(intent);

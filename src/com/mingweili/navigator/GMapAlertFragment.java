@@ -10,13 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 
+/**
+ * Fragment of alert dialog shown before navigation starts. 
+ */
 public class GMapAlertFragment extends DialogFragment {
 	
+	/**
+	 * Interface for invoker (Navigation activity) to implement to respond to confirm button click event
+	 */
 	public interface NoticeDialogListener {
         public void onDialogPositiveClick(boolean notShowChecked);
     }
 	
-	private NoticeDialogListener mListener;
+	private NoticeDialogListener mListener;			// Handle of invoker of this dialog to inject confirm button click event listener
 	
 	@Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

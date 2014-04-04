@@ -54,7 +54,7 @@ public class BuildingInventoryActivity extends FragmentActivity
 		}
 
 		/** 
-		 *  Method to get each tab item, overriding FragmentPagerAdapter default method
+		 *  Method to get each tab item (east/west campus list), overriding FragmentPagerAdapter default method
 		 *  to provide customized logic and data
 		 */		
 		@Override
@@ -85,9 +85,7 @@ public class BuildingInventoryActivity extends FragmentActivity
 		 *  to provide customized logic and data
 		 */	
 		@Override
-		public int getCount() {
-			return 2;
-		}
+		public int getCount() { return 2; }
 
 		/** 
 		 *  Method to get  tab titles, overriding FragmentPagerAdapter default method
@@ -97,9 +95,9 @@ public class BuildingInventoryActivity extends FragmentActivity
 		public CharSequence getPageTitle(int position) {
 			switch (position) {
 			case 0:
-				return getString(R.string.building_inventory_tab_label_east_campus);
+				return getResources().getString(R.string.building_inventory_tab_label_east_campus);
 			case 1:
-				return getString(R.string.building_inventory_tab_label_west_campus);
+				return getResources().getString(R.string.building_inventory_tab_label_west_campus);
 			default:
 				return null;
 			}
@@ -141,7 +139,7 @@ public class BuildingInventoryActivity extends FragmentActivity
 			// listen the query change, update the list on real time
 			// let the adapter update the list
 			for(BuildingInventoryListAdapter adapter : this.mListAdapters)
-				// Let these two list adapters update their list based on query
+				// Let these two list adapters update their list based on updated query
 				adapter.query(query);
 			return true;
 		}
@@ -157,7 +155,7 @@ public class BuildingInventoryActivity extends FragmentActivity
 		}
 	}
 	
-	private SentFrom mSentFrom;		//Indicator used to distinguish which activity sent the intent
+	private SentFrom mSentFrom;		// Indicator used to distinguish which activity sent the intent
 	private String mFromOrTo;		// Indicator used to distinguish intent request sent from NavigationActivity
 	public String getFromOrTo() {
 		return mFromOrTo;
@@ -185,7 +183,8 @@ public class BuildingInventoryActivity extends FragmentActivity
 	/**
 	 * Method to deal with intents sent from different activities
 	 * 1. For Navigation activity, BuildingInventory activity only provides the functionality as 
-	 * a selector: when user click one building item, this choice will return to Navigation activity.
+	 * a selector: when user click one building item, this choice will return to Navigation activity
+	 * as origin/destination.
 	 * 2. For CampusMap or Main activity, BuildingInventory provides full functionality. when user 
 	 * click one building item, BuildingInfo activity will display for this building item.
 	 */
@@ -210,7 +209,8 @@ public class BuildingInventoryActivity extends FragmentActivity
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), this.mFromOrTo, this.mSentFrom);
+		mSectionsPagerAdapter 
+			= new SectionsPagerAdapter(getSupportFragmentManager(), this.mFromOrTo, this.mSentFrom);
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.campus_tabs_pager);
@@ -258,12 +258,13 @@ public class BuildingInventoryActivity extends FragmentActivity
 		
 		// Associate searchable configuration with the SearchView
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        this.mSearchView = (SearchView) menu
-        		.findItem(R.id.building_inventory_action_search).getActionView();
-        this.mSearchView.setSearchableInfo(searchManager
-                .getSearchableInfo(getComponentName()));
+        this.mSearchView 
+       		= (SearchView) menu.findItem(R.id.building_inventory_action_search).getActionView();
+        this.mSearchView
+        	.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         // Set up the query change listener to respond to user's query and update the list on the fly
-        mSearchView.setOnQueryTextListener(new SearchOnQueryTextListener(this.mSectionsPagerAdapter.getListAdapters()));
+        mSearchView
+        	.setOnQueryTextListener(new SearchOnQueryTextListener(this.mSectionsPagerAdapter.getListAdapters()));
         
         //this.mSearchView.setFocusable(true);
         this.mSearchView.setIconifiedByDefault(true);
@@ -287,7 +288,6 @@ public class BuildingInventoryActivity extends FragmentActivity
 	 * Method of defining menu items
 	 */
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle presses on the action bar items
 		Intent intent = new Intent();
 	    switch (item.getItemId()) {
 		    case android.R.id.home:

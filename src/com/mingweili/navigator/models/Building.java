@@ -3,16 +3,19 @@ package com.mingweili.navigator.models;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * Class for individual building data
+ */
 public class Building implements Serializable {
 	
 	// auto generated ID for serialization
 	private static final long serialVersionUID = -6191113350466245234L;
 	
-	private String id;
-	private String name;
-	private double[] latLng;
-	private BuildingArea area; 
-	private ArrayList<String> depts;
+	private String 				id;		// ID of the building
+	private String 				name;	// Name of the building
+	private double[] 			latLng;	// latitude and Longitude of the building
+	private BuildingArea 		area; 	// Area (east/west campus) building located
+	private ArrayList<String> 	depts;	// Department list located in the building
 	
 	public String getId() {
 		return id;

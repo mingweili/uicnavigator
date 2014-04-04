@@ -10,10 +10,16 @@ import android.content.res.XmlResourceParser;
 import com.mingweili.navigator.models.Building;
 import com.mingweili.navigator.models.BuildingArea;
 
+/** 
+ * Auxiliary helper class to read building data from XML file
+ */
 public class Util {
 	
 	private static ArrayList<Building> sBuildings;
 	
+	/**
+	 * Primary static method to read buildings from XML
+	 */
 	public static ArrayList<Building> readBuildings(XmlResourceParser parser, BuildingArea area) 
 			throws XmlPullParserException, IOException {
 		if(sBuildings == null || sBuildings.size() <= 0) {
@@ -33,6 +39,9 @@ public class Util {
 		return result;
 	}
 	
+	/**
+	 * Entry method for extracting building info from XML
+	 */
 	public static void readBuildings(XmlResourceParser parser) throws XmlPullParserException, IOException {
 		sBuildings = new ArrayList<Building>();
 		while(parser.next() != XmlResourceParser.END_DOCUMENT) {
@@ -49,6 +58,9 @@ public class Util {
 		parser.close();
 	}
 
+	/**
+	 * Actual method for extracting building info from XML
+	 */
 	private static Building initBuilding(XmlResourceParser parser) throws XmlPullParserException, IOException {
 		Building building = new Building();
 		// get the building id from attribute
@@ -66,7 +78,7 @@ public class Util {
 			
 			String tagName = parser.getName();
 			
-			// get the building full name
+			// Get the building full name
 			if(tagName.equals("name")) {
 				parser.require(XmlResourceParser.START_TAG, null, "name");
 				if (parser.next() == XmlResourceParser.TEXT) {
@@ -76,7 +88,7 @@ public class Util {
 				parser.require(XmlResourceParser.END_TAG, null, "name");
 			}
 			
-			// get the building latitude
+			// Get the building latitude
 			else if(tagName.equals("lat")) {
 				parser.require(XmlResourceParser.START_TAG, null, "lat");
 				if (parser.next() == XmlResourceParser.TEXT) {
@@ -86,7 +98,7 @@ public class Util {
 				parser.require(XmlResourceParser.END_TAG, null, "lat");
 			}
 			
-			// get the building longtitude
+			// Get the building longitude
 			else if(tagName.equals("lng")) {
 				parser.require(XmlResourceParser.START_TAG, null, "lng");
 				if (parser.next() == XmlResourceParser.TEXT) {
@@ -95,6 +107,8 @@ public class Util {
 			    }
 				parser.require(XmlResourceParser.END_TAG, null, "lng");
 			}
+			
+			// Get the building longitude
 			else if(tagName.equals("area")) {
 				parser.require(XmlResourceParser.START_TAG, null, "area");
 				if (parser.next() == XmlResourceParser.TEXT) {
@@ -104,7 +118,7 @@ public class Util {
 				parser.require(XmlResourceParser.END_TAG, null, "area");
 			}
 			
-			// get the dept list if there's any
+			// Get the department list if there's any
 			else if(tagName.equals("depts")) {
 				parser.require(XmlResourceParser.START_TAG, null, "depts");
 				while(parser.next() != XmlResourceParser.END_TAG) {
@@ -119,6 +133,7 @@ public class Util {
 			} // end of else if
 		} // end of while
 		
+		// initialize building data from extracted info
 		building.setId(id);
 		building.setName(name);
 		building.setLatLng(new double[]{lat, lng});
@@ -128,6 +143,9 @@ public class Util {
 		return building;
 	}
 
+	/**
+	 * Method to filter matched buildings from building list based on updated user's query
+	 */
 	public static ArrayList<Building> queryBuildingsMatched(String q, ArrayList<Building> list) {
 		ArrayList<Building> result = new ArrayList<Building>();
 		for(Building b : list) {
