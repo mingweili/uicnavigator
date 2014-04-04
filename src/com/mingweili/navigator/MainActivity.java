@@ -8,6 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+/**
+ *  Activity of home screen.
+ */
 public class MainActivity extends Activity {
 
 	@Override
@@ -23,15 +26,21 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
+	/**
+	 * Method for dispatching different actions
+	 */
 	public void executeAction(View view) {
 		Intent intent = new Intent();
 		switch(view.getId()) {
+		// open campus map option
 		case R.id.main_action_1_imageview :
 			intent.setClass(this, CampusMapActivity.class);
 			break;
+		// search buildings option
 		case R.id.main_action_2_imageview :
 			intent.setClass(this, BuildingInventoryActivity.class);
 			break;
+		// get directions option
 		case R.id.main_action_3_imageview :
 			intent.setClass(this, NavigationActivity.class);
 			break;
@@ -41,6 +50,9 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 	
+	/**
+	 * Method for defining menu items
+	 */
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle presses on the action bar items
 		Intent intent = new Intent();

@@ -486,10 +486,10 @@ containing a value of this type.
         public static final int building_inventory_title=0x7f07003a;
         public static final int campus_map_menu_action_about_title=0x7f07002e;
         public static final int campus_map_menu_action_navigate_title=0x7f07002c;
-        public static final int campus_map_menu_action_satellite_switch_title_0=0x7f07002a;
-        public static final int campus_map_menu_action_satellite_switch_title_1=0x7f07002b;
+        public static final int campus_map_menu_action_satellite_switch_title_0=0x7f070029;
+        public static final int campus_map_menu_action_satellite_switch_title_1=0x7f07002a;
         public static final int campus_map_menu_action_settings_title=0x7f07002d;
-        public static final int campus_map_menu_action_show_list_title=0x7f070029;
+        public static final int campus_map_menu_action_show_list_title=0x7f07002b;
         /**  labels of CampusMap Activity 
          */
         public static final int campus_map_title=0x7f070028;

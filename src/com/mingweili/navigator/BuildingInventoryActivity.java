@@ -25,20 +25,25 @@ import android.widget.SearchView.OnQueryTextListener;
 import com.mingweili.navigator.models.BuildingInventoryListAdapter;
 import com.mingweili.navigator.models.SentFrom;
 
-public class BuildingInventoryActivity extends FragmentActivity implements TabListener {
+/**
+ * Activity of building list screen which shows the building list and is searchable to users
+ */
+public class BuildingInventoryActivity extends FragmentActivity 
+	implements TabListener {
 	
-	// this class is used to handle the fixed tab
+	// This class is used to handle the fixed tab
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		
-		private String fromOrTo;
-		private SentFrom sentFrom;
-		private EastCampusFragment eastFragment;
-		private WestCampusFragment westFragment;
+		private String fromOrTo;					// Indicator used to distinguish intent request sent from NavigationActivity
+		private SentFrom sentFrom;					// Indicator used to distinguish which activity sent the intent
+		private EastCampusFragment eastFragment;	// Fragment of east campus building list
+		private WestCampusFragment westFragment;	// Fragment of west campus building list
 		
 		public SectionsPagerAdapter(FragmentManager fm, String fot, SentFrom sf) {
 			super(fm);
 			this.fromOrTo = fot;
 			this.sentFrom = sf;
+			// Instantiate east/west fragment and send indicators to each fragment
 			Bundle args = new Bundle();
 			args.putSerializable("sentFrom", this.sentFrom);
 			args.putString("fromOrTo", this.fromOrTo);
@@ -48,6 +53,10 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 			this.westFragment.setArguments(args);
 		}
 
+		/** 
+		 *  Method to get each tab item, overriding FragmentPagerAdapter default method
+		 *  to provide customized logic and data
+		 */		
 		@Override
 		public Fragment getItem(int position) {
 			Bundle args = new Bundle();
@@ -71,11 +80,19 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 			}
 		}
 
+		/** 
+		 *  Method to get tab counts, overriding FragmentPagerAdapter default method
+		 *  to provide customized logic and data
+		 */	
 		@Override
 		public int getCount() {
 			return 2;
 		}
 
+		/** 
+		 *  Method to get  tab titles, overriding FragmentPagerAdapter default method
+		 *  to provide customized logic and data
+		 */	
 		@Override
 		public CharSequence getPageTitle(int position) {
 			switch (position) {
@@ -88,52 +105,69 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 			}
 		}
 		
+		/**
+		 * Expose an interface for SearchOnQueryTextListener to visit the list adapter provided by east/west fragment
+		 */
 		public BuildingInventoryListAdapter[] getListAdapters() {
 			return new BuildingInventoryListAdapter[] 
-					{
-						this.eastFragment.getListAdapter(), 
-						this.westFragment.getListAdapter()
-					};
+				{
+					this.eastFragment.getListAdapter(), 
+					this.westFragment.getListAdapter()
+				};
 		}
 	}
 	
-	// Class used for listening query change
+	/** 
+	 * Class used for listening query change
+	 */
 	class SearchOnQueryTextListener implements OnQueryTextListener {
 		
 		private BuildingInventoryListAdapter[] mListAdapters;
 		
+		/**
+		 * Method to set the list adapters of east/west list in order to 
+		 * change those lists on the fly when user's input changes
+		 */
 		public SearchOnQueryTextListener(BuildingInventoryListAdapter[] adapter) {
 			this.mListAdapters = adapter;
 		}
 		
+		/**
+		 * Method for responding user's input query change.
+		 * Update the east/west campus list on real time
+		 */
 		@Override
 		public boolean onQueryTextChange(String query) {
 			// listen the query change, update the list on real time
 			// let the adapter update the list
 			for(BuildingInventoryListAdapter adapter : this.mListAdapters)
+				// Let these two list adapters update their list based on query
 				adapter.query(query);
 			return true;
 		}
+		
+		/**
+		 * Method to override default behavior when submit button clicked.
+		 * Do nothing
+		 */
 		@Override
 		public boolean onQueryTextSubmit(String arg0) {
-			// do nothing, all the UI change is done in onQueryTextChange callback
+			// Do nothing, all the UI change is done in onQueryTextChange callback
 			return true;
 		}
 	}
 	
-		
-	// enum of what activity started this activity
-	private SentFrom mSentFrom;	
-	private String mFromOrTo;
+	private SentFrom mSentFrom;		//Indicator used to distinguish which activity sent the intent
+	private String mFromOrTo;		// Indicator used to distinguish intent request sent from NavigationActivity
 	public String getFromOrTo() {
 		return mFromOrTo;
 	}
 
-	// variables that hold components about fixed tabs
+	// Variables that hold components about fixed tabs
 	private SectionsPagerAdapter mSectionsPagerAdapter;
 	private ViewPager mViewPager;
 
-	// variable that holds search widget
+	// Variable that holds search widget
 	private SearchView mSearchView;
 
 	@Override
@@ -142,12 +176,19 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 		setContentView(R.layout.activity_building_inventory);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		
-		// 1. handle the intent (either sent from Navigation activity or from main activity)
+		// 1. Handle the intent (either sent from Navigation activity or from CampusMap activity)
 		this.handleIntent(getIntent());
-		// 2. set up fixed tab
+		// 2. Set up fixed tab
 		this.setUpFixedTab();
 	}
 	
+	/**
+	 * Method to deal with intents sent from different activities
+	 * 1. For Navigation activity, BuildingInventory activity only provides the functionality as 
+	 * a selector: when user click one building item, this choice will return to Navigation activity.
+	 * 2. For CampusMap or Main activity, BuildingInventory provides full functionality. when user 
+	 * click one building item, BuildingInfo activity will display for this building item.
+	 */
 	private void handleIntent(Intent intent) {
 	    // it was started from navigation activity, set the result based on user's selection and return result
 		String type 
@@ -161,6 +202,9 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 	    }
 	}
 	
+	/** 
+	 * Method for set up components of tabs
+	 */
 	private void setUpFixedTab() {
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
@@ -174,23 +218,25 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 
 		// When swiping between different sections, select the corresponding tab.
 		mViewPager
-				.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-					@Override
-					public void onPageSelected(int position) {
-						// set the current tab
-						actionBar.setSelectedNavigationItem(position);
-					}
-				});
+			.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+				@Override
+				public void onPageSelected(int position) {
+					// set the current tab
+					actionBar.setSelectedNavigationItem(position);
+				}
+			});
 
 		// For each of the sections in the app, add a tab to the action bar.
 		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
 			actionBar.addTab(actionBar.newTab()
-					.setText(mSectionsPagerAdapter.getPageTitle(i))
-					.setTabListener(this));
+				.setText(mSectionsPagerAdapter.getPageTitle(i))
+				.setTabListener(this));
 		}
 	}
 
-	// callbacks in terms of fixed tab navigation
+	/** 
+	 * Methods of callback in terms of fixed tab navigation
+	 */
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		mViewPager.setCurrentItem(tab.getPosition());
@@ -202,6 +248,9 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {}
 
+	/**
+	 * Method of defining menu, action bar and search widget
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -213,14 +262,14 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
         		.findItem(R.id.building_inventory_action_search).getActionView();
         this.mSearchView.setSearchableInfo(searchManager
                 .getSearchableInfo(getComponentName()));
-        // set up the query change listener to respond to user's query and update the list on the fly
+        // Set up the query change listener to respond to user's query and update the list on the fly
         mSearchView.setOnQueryTextListener(new SearchOnQueryTextListener(this.mSectionsPagerAdapter.getListAdapters()));
         
         //this.mSearchView.setFocusable(true);
         this.mSearchView.setIconifiedByDefault(true);
         //this.mSearchView.requestFocusFromTouch();
 
-        // set the search view text color
+        // Set the search view text color brutely
         LinearLayout ll = (LinearLayout)this.mSearchView.getChildAt(0);
         LinearLayout ll2 = (LinearLayout)ll.getChildAt(2);
         LinearLayout ll3 = (LinearLayout)ll2.getChildAt(1);
@@ -230,9 +279,13 @@ public class BuildingInventoryActivity extends FragmentActivity implements TabLi
 	    int searchImgId = getResources().getIdentifier("android:id/search_button", null, null);
 	    ImageView v = (ImageView) mSearchView.findViewById(searchImgId);
 	    v.setImageResource(R.drawable.ic_action_search);
+	    
         return true;
 	}
 	
+	/**
+	 * Method of defining menu items
+	 */
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle presses on the action bar items
 		Intent intent = new Intent();

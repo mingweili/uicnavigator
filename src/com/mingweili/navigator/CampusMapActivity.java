@@ -38,13 +38,17 @@ import com.mingweili.navigator.models.Building;
 import com.mingweili.navigator.models.BuildingArea;
 import com.mingweili.navigator.utils.Util;
 
+/**
+ * Activity of campus map screen.
+ * Google Map fragment embedded.
+ */
 public class CampusMapActivity extends Activity implements
-	GooglePlayServicesClient.ConnectionCallbacks,
-	GooglePlayServicesClient.OnConnectionFailedListener,
-	OnInfoWindowClickListener {
+	GooglePlayServicesClient.ConnectionCallbacks,			// interface for location services (get my current location)
+	GooglePlayServicesClient.OnConnectionFailedListener,	// interface for location services (get my current location)
+	OnInfoWindowClickListener {								// interface for marker window click event handler
 
-	/*
-	 * this class is used for customized info window
+	/**
+	 * This class is used for customized info window
 	 */
 	class CustomBuildingInfoWindowAdapter implements InfoWindowAdapter {
 
@@ -65,6 +69,9 @@ public class CampusMapActivity extends Activity implements
             return mWindow;
         }
 		
+		/**
+		 * Method for rendering customized marker window
+		 */
 		private void render(Marker marker, View view) {
 			ImageView buildingThumbnail = (ImageView) view.findViewById(R.id.info_window_bldg_thumbnail);
 			buildingThumbnail.setImageResource(R.drawable.info_window_bldg_thumbnail);
@@ -80,10 +87,10 @@ public class CampusMapActivity extends Activity implements
 		
 	}
 
-	private GoogleMap 		mMap;
-	private LocationClient 	mLocationClient;
+	private GoogleMap 		mMap;				// handle of Google Map object
+	private LocationClient 	mLocationClient;	// handle of location services
 	
-	private ArrayList<Building> mBuildings;
+	private ArrayList<Building> mBuildings;		// list of buildings
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -91,9 +98,13 @@ public class CampusMapActivity extends Activity implements
 		setContentView(R.layout.activity_campus_map);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
+		// initialize location services
         this.initializeLocationClient();
 	}
 	
+	/**
+	 * Methods in terms of Activity life cycle
+	 */
 	@Override
     protected void onResume() {
         super.onResume();        
@@ -115,20 +126,23 @@ public class CampusMapActivity extends Activity implements
         super.onStop();
     }
 	
+	/**
+	 * Method for initialization of location services
+	 */
 	private void initializeLocationClient() {
 		if (mLocationClient == null) {
             mLocationClient = new LocationClient(
-                    getApplicationContext(),
-                    this,  // ConnectionCallbacks
-                    this); // OnConnectionFailedListener
+            	getApplicationContext(),
+            	this,  // ConnectionCallbacks
+            	this); // OnConnectionFailedListener
 
             if(!mLocationClient.isConnected())
             	mLocationClient.connect();
         }
 	}
 	
-	/*
-	 * overriding methods for ConnectionCallbacks and OnConnectionFailedListener
+	/**
+	 * Overriding methods for ConnectionCallbacks and OnConnectionFailedListener
 	 */
 	@Override
 	public void onConnectionFailed(ConnectionResult connectionResult) {
@@ -136,10 +150,7 @@ public class CampusMapActivity extends Activity implements
             try {
                 // Start an Activity that tries to resolve the error
                 connectionResult.startResolutionForResult(this, 9000);
-                /*
-                 * Thrown if Google Play services canceled the original
-                 * PendingIntent
-                 */
+                //Thrown if Google Play services canceled the original Pending Intent
             } catch (IntentSender.SendIntentException e) {
                 // Log the error
                 e.printStackTrace();
@@ -151,8 +162,8 @@ public class CampusMapActivity extends Activity implements
 	}
 
 	@Override
-	public void onConnected(Bundle arg0) {
-		// initialize map only until location service is online 
+	public void onConnected(Bundle bundle) {
+		// Initialize map only until location service is online 
 		// because map will need user's current location
         this.initializeMap();
 	}
@@ -163,6 +174,9 @@ public class CampusMapActivity extends Activity implements
     	Toast.makeText(this, getString(R.string.ERROR_MESSAGE_LOCATION_CONNECT), Toast.LENGTH_LONG).show();
 	}
 
+	/**
+	 * Method for initialization of Google Map fragment (the map)
+	 */
 	private void initializeMap() {
 		if(mMap == null) {
 			mMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
@@ -171,22 +185,26 @@ public class CampusMapActivity extends Activity implements
 			setupMap();
 		}
 	}
+	
+	/**
+	 * Method for set up map, set up preferences, configurations, etc.
+	 */
 	private void setupMap() {
-		// register customized info window
+		// Register customized info window
 		mMap.setInfoWindowAdapter(new CustomBuildingInfoWindowAdapter());
-		// register info window click event
+		// Register info window click event
 		mMap.setOnInfoWindowClickListener(this);
 		
-		// set up UI controls programmatically
+		// Set up UI controls programmatically
 		mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 		mMap.setMyLocationEnabled(true);
 		mMap.setBuildingsEnabled(true);
 		mMap.setIndoorEnabled(true);
 
-		// mark the buildings in UIC
+		// Mark the buildings in UIC
 		this.markBuildings();
 		
-		// set the default camera location
+		// Set the default camera location based on user's settings
 		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
 		String defaultLocation = preference.getString(
 				getString(R.string.settings_default_location_key), 
@@ -195,31 +213,37 @@ public class CampusMapActivity extends Activity implements
 		double defaultLat = 0, defaultLng = 0;
 		int zoomLevel = getResources().getInteger(R.integer.initial_zoom_level);
 		String[] options = getResources().getStringArray(R.array.settings_default_location_choices);
+		// "My Location" option
 		if(defaultLocation.equals(options[0])) {
 			Location myLocation = mLocationClient.getLastLocation();
 			defaultLat = myLocation.getLatitude();
 			defaultLng = myLocation.getLongitude();
 		}
+		// "East Campus" options
 		else if(defaultLocation.equals(options[1])) {
 			defaultLat = Double.valueOf(getString(R.string.east_campus_lat));
 			defaultLng = Double.valueOf(getString(R.string.east_campus_lng));
 			zoomLevel -= 2;
 		}
+		// "West Campus" options
 		else {
 			defaultLat = Double.valueOf(getString(R.string.west_campus_lat));
 			defaultLng = Double.valueOf(getString(R.string.west_campus_lng));
 			zoomLevel -= 2;
 		}
 		
+		// Move map camera
 		CameraUpdate initialPosition 
 			= CameraUpdateFactory.newLatLngZoom (new LatLng(defaultLat, defaultLng),zoomLevel);
 		mMap.animateCamera(initialPosition);
 		
 	}
 
+	// Method to mark all buildings on map
 	private void markBuildings() {
 		XmlResourceParser parser = getResources().getXml(R.xml.buildings);
 		try {
+			// Read building list from xml file
 			this.mBuildings = Util.readBuildings(parser, null);
 			for(Building building : this.mBuildings) {
 				LatLng buildingPosition = new LatLng(building.getLatLng()[0], building.getLatLng()[1]);
@@ -245,6 +269,9 @@ public class CampusMapActivity extends Activity implements
 		}
 	}
 
+	/**
+	 * Method to register menu
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -252,6 +279,9 @@ public class CampusMapActivity extends Activity implements
 		return true;
 	}
 	
+	/**
+	 * Method for defining menu items
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle presses on the action bar items
@@ -284,6 +314,11 @@ public class CampusMapActivity extends Activity implements
 	    }
 	}
 
+	/**
+	 * Method for switching map mode (basic/satellite)
+	 * It's called when "@+id/campus_map_menu_action_satellite_switch" 
+	 * menu item clicked
+	 */
 	private void switchMapType(MenuItem item) {
 		// TODO Auto-generated method stub
 		if(this.mMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL) {
@@ -296,9 +331,12 @@ public class CampusMapActivity extends Activity implements
 		}
 	}
 
+	/**
+	 * Method for implementing OnInfoWindowClickListener interface
+	 */
 	@Override
 	public void onInfoWindowClick(Marker marker) {
-		// send the building information to the new activity
+		// Send the building information to the new activity
 		Intent invokeBuildingInfoActivityIntent = new Intent(this, BuildingInfoActivity.class);
 		Building buildingClicked = null;
 		for(Building b : this.mBuildings) {
@@ -309,8 +347,7 @@ public class CampusMapActivity extends Activity implements
 				
 		}
 		invokeBuildingInfoActivityIntent
-			.putExtra(getResources().getString(R.string.EXTRA_MESSAGE_BUILDING_OBJECT), 
-					buildingClicked);
+			.putExtra(getResources().getString(R.string.EXTRA_MESSAGE_BUILDING_OBJECT), buildingClicked);
 		
 		startActivity(invokeBuildingInfoActivityIntent);
 	}
