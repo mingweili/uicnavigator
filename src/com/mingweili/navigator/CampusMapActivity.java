@@ -7,7 +7,6 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.res.XmlResourceParser;
 import android.location.Location;
@@ -146,24 +145,12 @@ public class CampusMapActivity extends Activity implements
 	 */
 	@Override
 	public void onConnectionFailed(ConnectionResult connectionResult) {
-		if (connectionResult.hasResolution()) {
-            try {
-                // Start an Activity that tries to resolve the error
-                connectionResult.startResolutionForResult(this, 9000);
-                //Thrown if Google Play services canceled the original Pending Intent
-            } catch (IntentSender.SendIntentException e) {
-                // Log the error
-                e.printStackTrace();
-                Toast.makeText(this, getString(R.string.ERROR_MESSAGE_LOCATION_CONNECT), Toast.LENGTH_LONG).show();
-            }
-        } else {
-        	Toast.makeText(this, getString(R.string.ERROR_MESSAGE_LOCATION_CONNECT), Toast.LENGTH_LONG).show();
-        }
+		Toast.makeText(this, getString(R.string.ERROR_MESSAGE_LOCATION_CONNECT), Toast.LENGTH_LONG).show();
 	}
 
 	@Override
 	public void onConnected(Bundle bundle) {
-		// Initialize map only until location service is online 
+		// Initialize map only until location service is online
 		// because map will need user's current location
         this.initializeMap();
 	}

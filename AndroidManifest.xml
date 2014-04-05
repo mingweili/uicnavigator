@@ -72,17 +72,6 @@
                 android:value="com.mingweili.navigator.BuildingInventoryActivity" />
         </activity>
         <activity
-            android:name="com.mingweili.navigator.NavigationActivity"
-            android:configChanges="orientation"
-            android:label="@string/navigation_title"
-            android:logo="@drawable/ic_launcher_white"
-            android:parentActivityName="com.mingweili.navigator.MainActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mingweili.navigator.MainActivity" />
-        </activity>
-        <activity
             android:name="com.mingweili.navigator.BuildingInventoryActivity"
             android:configChanges="orientation"
             android:label="@string/building_inventory_title"
@@ -99,6 +88,17 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mingweili.navigator.NavigationActivity"
+            android:configChanges="orientation"
+            android:label="@string/navigation_title"
+            android:logo="@drawable/ic_launcher_white"
+            android:parentActivityName="com.mingweili.navigator.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mingweili.navigator.MainActivity" />
         </activity>
         <activity
             android:name="com.mingweili.navigator.SettingsActivity"

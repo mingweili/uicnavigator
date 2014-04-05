@@ -67,8 +67,6 @@
 
     <!-- labels of About activity -->
     <string name="about_title">About</string>
-    <string name="about_copyright_label">© 2014 Mingwei Li</string>
-    <string name="about_app_name_version">UIC Navigator 1.0</string>
 
     <!-- labels of Preferences keys -->
     <string name="settings_not_show_alert_key">pref_notShowAlert</string>
