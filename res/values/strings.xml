@@ -43,6 +43,11 @@
     <string name="navigation_select_building_button_label">Select Building</string>
     <string name="navigation_my_location_text_placeholder">My Location</string>
     <string name="navigation_menu_action_navigate_title">Start</string>
+    <string name="navigation_travel_mode_label">Travel Node: </string>
+    <string name="navigation_travel_mode_option1_label">Walking</string>
+    <string name="navigation_travel_mode_option2_label">Public Transit</string>
+    <string name="navigation_travel_mode_option3_label">Driving</string>
+    
 
     <!-- labels of Gmaps alert fragment -->
     <string name="alert_instruction">This will brings you to native Google Maps app or Google Maps website version if it\'s not installed on your device. You are free to change travel modes (as shown below) or any other options inside Google Maps. To go back to UIC Navigator, please use Back button on device or Android multi-tasking.</string>
@@ -64,6 +69,11 @@
     <string name="settings_default_location_summary">The default location in map when map loaded</string>
     <string name="settings_default_location_dialog_title">Please choose</string>
     <string name="settings_default_location_default_value">My Location</string>
+    <string name="settings_default_travel_mode_key">pref_defaultTravelMode</string>
+    <string name="settings_default_travel_mode_label">Travel Mode</string>
+    <string name="settings_default_travel_mode_summary">The default travel mode used in navigation</string>
+    <string name="settings_default_travel_mode_dialog_title">Please choose</string>
+    <string name="settings_default_travel_mode_default_value">Walking</string>
 
     <!-- labels of About activity -->
     <string name="about_title">About</string>

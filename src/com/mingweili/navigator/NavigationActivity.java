@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -57,6 +58,26 @@ public class NavigationActivity extends Activity implements
 			
 			EditText destinationEditText = (EditText) findViewById(R.id.navigation_to_edittext);
 			destinationEditText.setText(this.mDestinationText);
+		}
+		
+		// initialize default travel mode selection from preferences set in Settings screen
+		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+		String prefTravelMode = preference.getString(
+				getResources().getString(R.string.settings_default_travel_mode_key), 
+				getResources().getString(R.string.settings_default_travel_mode_default_value));
+		
+		RadioGroup travelMode = (RadioGroup) findViewById(R.id.navigation_travel_mode_radiogroup);
+		if(prefTravelMode.equals(getResources().getString(R.string.navigation_travel_mode_option1_label))) {
+			travelMode.check(R.id.navigation_travel_mode_option_1);
+		}
+		else if(prefTravelMode.equals(getResources().getString(R.string.navigation_travel_mode_option2_label))) {
+			travelMode.check(R.id.navigation_travel_mode_option_2);
+		}
+		else if(prefTravelMode.equals(getResources().getString(R.string.navigation_travel_mode_option3_label))) {
+			travelMode.check(R.id.navigation_travel_mode_option_3);
+		}
+		else {
+			travelMode.check(R.id.navigation_travel_mode_option_1);
 		}
 	}
 	
@@ -152,11 +173,26 @@ public class NavigationActivity extends Activity implements
 		originLatLng = String.valueOf(this.mOriginLagLng[0]) + "," + String.valueOf(this.mOriginLagLng[1]);
 		destinationLatLng = String.valueOf(this.mDestinationLatLng[0]) + "," + String.valueOf(this.mDestinationLatLng[1]);
 		
+		RadioGroup travelMode = (RadioGroup) findViewById(R.id.navigation_travel_mode_radiogroup);
+		int checkedOptionId = travelMode.getCheckedRadioButtonId();
+		String travelModePara = "";
+		switch(checkedOptionId) {
+		case R.id.navigation_travel_mode_option_1 :
+			travelModePara = "w";
+			break;
+		case R.id.navigation_travel_mode_option_2 :
+			travelModePara = "r";
+			break;
+		case R.id.navigation_travel_mode_option_3 :
+			travelModePara = "d";
+			break;
+		}
 		//Try start google map app to start the navigation
 		this.mNavigationUrl 
 			= getResources().getString(R.string.navigation_google_map_url) 
 			+ "?" + "saddr=" + originLatLng 
-			+ "&" + "daddr=" + destinationLatLng;
+			+ "&" + "daddr=" + destinationLatLng
+			+ "&" + "dirflg=" + travelModePara;
 		
 		// Before start the google map, show the instruction if not shown before
 		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);

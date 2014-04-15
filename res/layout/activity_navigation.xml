@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:gravity="center_horizontal"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
-    
+
     <TextView
         android:id="@+id/navigation_from_label_textview"
         android:layout_width="wrap_content"
@@ -14,7 +15,7 @@
         android:layout_marginTop="36dp"
         android:text="@string/navigation_from_label"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-    
+
     <EditText
         android:id="@+id/navigation_from_edittext"
         android:layout_width="wrap_content"
@@ -33,9 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/navigation_from_edittext"
         android:layout_below="@+id/navigation_from_edittext"
-        android:src="@drawable/ic_action_location_found"        
-        android:contentDescription="@string/placeholder" 
-        android:onClick="useMyLocationFrom" />
+        android:contentDescription="@string/placeholder"
+        android:onClick="useMyLocationFrom"
+        android:src="@drawable/ic_action_location_found" />
 
     <Button
         android:id="@+id/navigation_select_from_button"
@@ -43,8 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/navigation_from_edittext"
         android:layout_alignTop="@+id/navigation_locate_from_imagebutton"
-        android:text="@string/navigation_select_building_button_label" 
-        android:onClick="startFromSelection"/>
+        android:onClick="startFromSelection"
+        android:text="@string/navigation_select_building_button_label" />
 
     <TextView
         android:id="@+id/navigation_to_label_textview"
@@ -55,7 +56,7 @@
         android:layout_marginTop="31dp"
         android:text="@string/navigation_to_label"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-    
+
     <EditText
         android:id="@+id/navigation_to_edittext"
         android:layout_width="wrap_content"
@@ -66,16 +67,16 @@
         android:enabled="false"
         android:inputType="text"
         android:textColor="@color/blue_bright" />
-    
+
     <ImageButton
         android:id="@+id/navigation_locate_to_imagebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/navigation_to_edittext"
         android:layout_below="@+id/navigation_to_edittext"
-        android:src="@drawable/ic_action_location_found"        
-        android:contentDescription="@string/placeholder" 
-        android:onClick="useMyLocationTo" />
+        android:contentDescription="@string/placeholder"
+        android:onClick="useMyLocationTo"
+        android:src="@drawable/ic_action_location_found" />
 
     <Button
         android:id="@+id/navigation_select_to_button"
@@ -83,22 +84,61 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/navigation_to_edittext"
         android:layout_alignTop="@+id/navigation_locate_to_imagebutton"
-        android:text="@string/navigation_select_building_button_label"
-        android:onClick="startToSelection" />
+        android:onClick="startToSelection"
+        android:text="@string/navigation_select_building_button_label" />
 
     <ImageView
-        android:id="@+id/navigation_navigate_imageview"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_alignLeft="@+id/navigation_to_label_textview"
-        android:layout_alignRight="@+id/navigation_select_to_button"
-        android:layout_below="@+id/navigation_locate_to_imagebutton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/navigation_button_selector"
-        android:contentDescription="@string/placeholder"
-        android:onClick="startNavigate" />
-    
+        android1:id="@+id/navigation_navigate_imageview"
+        android1:layout_width="300dp"
+        android1:layout_height="60dp"
+        android1:layout_alignLeft="@+id/navigation_travel_mode_label"
+        android1:layout_alignParentBottom="true"
+        android1:layout_alignRight="@+id/navigation_travel_mode_radiogroup"
+        android1:layout_marginBottom="52dp"
+        android1:adjustViewBounds="true"
+        android1:contentDescription="@string/placeholder"
+        android1:onClick="startNavigate"
+        android1:scaleType="fitCenter"
+        android1:src="@drawable/navigation_button_selector" />
+
+    <RadioGroup
+        android1:id="@+id/navigation_travel_mode_radiogroup"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/navigation_locate_to_imagebutton"
+        android1:layout_alignRight="@+id/navigation_select_to_button"
+        android1:layout_below="@+id/navigation_travel_mode_label"
+        android1:layout_marginTop="18dp"
+        android1:orientation="vertical" >
+
+        <RadioButton
+            android1:id="@+id/navigation_travel_mode_option_1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:checked="true"
+            android1:text="@string/navigation_travel_mode_option1_label" />
+
+        <RadioButton
+            android1:id="@+id/navigation_travel_mode_option_2"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="@string/navigation_travel_mode_option2_label" />
+
+        <RadioButton
+            android1:id="@+id/navigation_travel_mode_option_3"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="@string/navigation_travel_mode_option3_label" />
+    </RadioGroup>
+
+    <TextView
+        android1:id="@+id/navigation_travel_mode_label"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/navigation_to_label_textview"
+        android1:layout_below="@+id/navigation_locate_to_imagebutton"
+        android1:layout_marginTop="32dp"
+        android1:text="@string/navigation_travel_mode_label"
+        android1:textAppearance="?android:attr/textAppearanceMedium" />
+
 </RelativeLayout>

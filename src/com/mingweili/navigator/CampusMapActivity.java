@@ -194,7 +194,7 @@ public class CampusMapActivity extends Activity implements
 		// Set the default camera location based on user's settings
 		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
 		String defaultLocation = preference.getString(
-				getString(R.string.settings_default_location_key), 
+				getString(R.string.settings_default_location_key),
 				getString(R.string.settings_default_location_default_value));
 		
 		double defaultLat = 0, defaultLng = 0;

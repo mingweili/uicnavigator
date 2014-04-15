@@ -5,4 +5,9 @@
         <item>East Campus</item>
         <item>West Campus</item>
     </string-array>
+    <string-array name="settings_default_travel_mode_choices">
+        <item>Walking</item>
+        <item>Public Transit</item>
+        <item>Driving</item>
+    </string-array>
 </resources>
