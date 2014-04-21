@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mingweili.navigator"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.mingweili.uicnavigator"
+    android:versionCode="3"
+    android:versionName="1.2" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -33,7 +33,7 @@
             android:value="AIzaSyCyWohTajlyskSzMVp99fjqj2RDWLL1u4E" />
 
         <activity
-            android:name="com.mingweili.navigator.WelcomeActivity"
+            android:name="com.mingweili.uicnavigator.WelcomeActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
@@ -44,43 +44,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mingweili.navigator.MainActivity"
+            android:name="com.mingweili.uicnavigator.MainActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             android:logo="@drawable/ic_launcher_white"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.mingweili.navigator.CampusMapActivity"
+            android:name="com.mingweili.uicnavigator.CampusMapActivity"
             android:configChanges="orientation"
             android:label="@string/campus_map_title"
             android:logo="@drawable/ic_launcher_white"
-            android:parentActivityName="com.mingweili.navigator.MainActivity"
+            android:parentActivityName="com.mingweili.uicnavigator.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mingweili.navigator.MainActivity" />
+                android:value="com.mingweili.uicnavigator.MainActivity" />
         </activity>
         <activity
-            android:name="com.mingweili.navigator.BuildingInfoActivity"
+            android:name="com.mingweili.uicnavigator.BuildingInfoActivity"
             android:configChanges="orientation"
             android:logo="@drawable/ic_launcher_white"
-            android:parentActivityName="com.mingweili.navigator.BuildingInventoryActivity"
+            android:parentActivityName="com.mingweili.uicnavigator.BuildingInventoryActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mingweili.navigator.BuildingInventoryActivity" />
+                android:value="com.mingweili.uicnavigator.BuildingInventoryActivity" />
         </activity>
         <activity
-            android:name="com.mingweili.navigator.BuildingInventoryActivity"
+            android:name="com.mingweili.uicnavigator.BuildingInventoryActivity"
             android:configChanges="orientation"
             android:label="@string/building_inventory_title"
             android:logo="@drawable/ic_launcher_white"
-            android:parentActivityName="com.mingweili.navigator.MainActivity"
+            android:parentActivityName="com.mingweili.uicnavigator.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mingweili.navigator.MainActivity" />
+                android:value="com.mingweili.uicnavigator.MainActivity" />
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -90,37 +90,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mingweili.navigator.NavigationActivity"
+            android:name="com.mingweili.uicnavigator.NavigationActivity"
             android:configChanges="orientation"
             android:label="@string/navigation_title"
             android:logo="@drawable/ic_launcher_white"
-            android:parentActivityName="com.mingweili.navigator.MainActivity"
+            android:parentActivityName="com.mingweili.uicnavigator.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mingweili.navigator.MainActivity" />
+                android:value="com.mingweili.uicnavigator.MainActivity" />
         </activity>
         <activity
-            android:name="com.mingweili.navigator.SettingsActivity"
+            android:name="com.mingweili.uicnavigator.SettingsActivity"
             android:configChanges="orientation"
             android:label="@string/settings_title"
             android:logo="@drawable/ic_launcher_white"
-            android:parentActivityName="com.mingweili.navigator.MainActivity"
+            android:parentActivityName="com.mingweili.uicnavigator.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mingweili.navigator.MainActivity" />
+                android:value="com.mingweili.uicnavigator.MainActivity" />
         </activity>
         <activity
-            android:name="com.mingweili.navigator.AboutActivity"
+            android:name="com.mingweili.uicnavigator.AboutActivity"
             android:configChanges="orientation"
             android:label="@string/about_title"
             android:logo="@drawable/ic_launcher_white"
-            android:parentActivityName="com.mingweili.navigator.MainActivity"
+            android:parentActivityName="com.mingweili.uicnavigator.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mingweili.navigator.MainActivity" />
+                android:value="com.mingweili.uicnavigator.MainActivity" />
         </activity>
     </application>
 

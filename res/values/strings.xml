@@ -43,7 +43,7 @@
     <string name="navigation_select_building_button_label">Select Building</string>
     <string name="navigation_my_location_text_placeholder">My Location</string>
     <string name="navigation_menu_action_navigate_title">Start</string>
-    <string name="navigation_travel_mode_label">Travel Node: </string>
+    <string name="navigation_travel_mode_label">Travel Mode: </string>
     <string name="navigation_travel_mode_option1_label">Walking</string>
     <string name="navigation_travel_mode_option2_label">Public Transit</string>
     <string name="navigation_travel_mode_option3_label">Driving</string>
