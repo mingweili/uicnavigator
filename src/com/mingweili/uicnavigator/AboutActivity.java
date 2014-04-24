@@ -1,7 +1,5 @@
 package com.mingweili.uicnavigator;
 
-import com.mingweili.uicnavigator.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -9,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 public class AboutActivity extends Activity {
 
@@ -20,6 +19,8 @@ public class AboutActivity extends Activity {
 		
 		Button button = (Button) this.findViewById(R.id.welcome_start_button);
 		button.setVisibility(View.GONE);
+		CheckBox checkbox = (CheckBox) this.findViewById(R.id.welcome_not_show_again_checkbox);
+		checkbox.setVisibility(View.GONE);
 	}
 
 	@Override

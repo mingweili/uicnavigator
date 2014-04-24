@@ -346,28 +346,28 @@ containing a value of this type.
         public static final int welcome_logo=0x7f020087;
     }
     public static final class id {
-        public static final int alert_instruction_label_textview=0x7f06002b;
-        public static final int alert_instruction_screenshot_imageview=0x7f06002c;
-        public static final int alert_not_show_again_checkbox=0x7f06002d;
+        public static final int alert_instruction_label_textview=0x7f06002c;
+        public static final int alert_instruction_screenshot_imageview=0x7f06002d;
+        public static final int alert_not_show_again_checkbox=0x7f06002e;
         public static final int building_info_image_imageview=0x7f060006;
         public static final int building_info_map=0x7f060007;
-        public static final int building_info_menu_action_navigate=0x7f06002e;
+        public static final int building_info_menu_action_navigate=0x7f06002f;
         public static final int building_info_name_textview=0x7f060005;
-        public static final int building_inventory_action_search=0x7f060031;
-        public static final int building_inventory_list=0x7f06002a;
-        public static final int campus_map_menu_action_about=0x7f060030;
-        public static final int campus_map_menu_action_navigate=0x7f060033;
-        public static final int campus_map_menu_action_satellite_switch=0x7f060034;
-        public static final int campus_map_menu_action_settings=0x7f06002f;
-        public static final int campus_map_menu_action_show_list=0x7f060032;
+        public static final int building_inventory_action_search=0x7f060032;
+        public static final int building_inventory_list=0x7f06002b;
+        public static final int campus_map_menu_action_about=0x7f060031;
+        public static final int campus_map_menu_action_navigate=0x7f060034;
+        public static final int campus_map_menu_action_satellite_switch=0x7f060035;
+        public static final int campus_map_menu_action_settings=0x7f060030;
+        public static final int campus_map_menu_action_show_list=0x7f060033;
         public static final int campus_tabs_pager=0x7f060008;
         public static final int hybrid=0x7f060004;
-        public static final int info_window_bldg_id=0x7f060025;
-        public static final int info_window_bldg_name=0x7f060026;
-        public static final int info_window_bldg_thumbnail=0x7f060024;
-        public static final int list_row_depts=0x7f060029;
-        public static final int list_row_desc=0x7f060028;
-        public static final int list_row_title=0x7f060027;
+        public static final int info_window_bldg_id=0x7f060026;
+        public static final int info_window_bldg_name=0x7f060027;
+        public static final int info_window_bldg_thumbnail=0x7f060025;
+        public static final int list_row_depts=0x7f06002a;
+        public static final int list_row_desc=0x7f060029;
+        public static final int list_row_title=0x7f060028;
         public static final int main_action_1_imageview=0x7f06000b;
         public static final int main_action_2_imageview=0x7f06000c;
         public static final int main_action_3_imageview=0x7f06000d;
@@ -395,6 +395,7 @@ containing a value of this type.
         public static final int welcome_author_name_textview=0x7f060020;
         public static final int welcome_cs_name_textview=0x7f06001f;
         public static final int welcome_logo_imageview=0x7f06001d;
+        public static final int welcome_not_show_again_checkbox=0x7f060024;
         public static final int welcome_start_button=0x7f060023;
         public static final int welcome_supervised_by_textview=0x7f060021;
         public static final int welcome_supervisor_textview=0x7f060022;
@@ -425,29 +426,29 @@ containing a value of this type.
         public static final int navigation=0x7f0c0004;
     }
     public static final class string {
-        public static final int ERROR_MESSAGE_DUPLICATED_INPUT=0x7f07005a;
-        public static final int ERROR_MESSAGE_INVALID_INPUT=0x7f070059;
+        public static final int ERROR_MESSAGE_DUPLICATED_INPUT=0x7f07005b;
+        public static final int ERROR_MESSAGE_INVALID_INPUT=0x7f07005a;
         /**  error messages 
          */
-        public static final int ERROR_MESSAGE_LOCATION_CONNECT=0x7f070056;
-        public static final int ERROR_MESSAGE_NAVIGATION_SELECTION=0x7f070058;
-        public static final int ERROR_MESSAGE_RESOURCE_READING=0x7f070057;
+        public static final int ERROR_MESSAGE_LOCATION_CONNECT=0x7f070057;
+        public static final int ERROR_MESSAGE_NAVIGATION_SELECTION=0x7f070059;
+        public static final int ERROR_MESSAGE_RESOURCE_READING=0x7f070058;
         /**  labels needed in source code for readibility, most of them are intent extra labels 
          */
-        public static final int EXTRA_MESSAGE_BUILDING_OBJECT=0x7f070051;
-        public static final int EXTRA_MESSAGE_DESTINATION=0x7f070052;
-        public static final int EXTRA_MESSAGE_FROM_OR_TO=0x7f070055;
-        public static final int EXTRA_MESSAGE_SENT_FROM=0x7f070054;
-        public static final int EXTRA_MESSAGE_START_FOR_RESULT_LABEL=0x7f070053;
+        public static final int EXTRA_MESSAGE_BUILDING_OBJECT=0x7f070052;
+        public static final int EXTRA_MESSAGE_DESTINATION=0x7f070053;
+        public static final int EXTRA_MESSAGE_FROM_OR_TO=0x7f070056;
+        public static final int EXTRA_MESSAGE_SENT_FROM=0x7f070055;
+        public static final int EXTRA_MESSAGE_START_FOR_RESULT_LABEL=0x7f070054;
         /**  labels of About activity 
          */
-        public static final int about_title=0x7f07004e;
-        public static final int alert_cancel_label=0x7f07003c;
-        public static final int alert_confirm_label=0x7f07003d;
+        public static final int about_title=0x7f07004f;
+        public static final int alert_cancel_label=0x7f07003d;
+        public static final int alert_confirm_label=0x7f07003e;
         /**  labels of Gmaps alert fragment 
          */
-        public static final int alert_instruction=0x7f07003a;
-        public static final int alert_not_show_again_label=0x7f07003b;
+        public static final int alert_instruction=0x7f07003b;
+        public static final int alert_not_show_again_label=0x7f07003c;
         /**  Application Name 
          */
         public static final int app_name=0x7f07001a;
@@ -476,23 +477,23 @@ containing a value of this type.
         public static final int auth_client_using_bad_version_title=0x7f070014;
         /**  labels of BuildingInfo activity 
          */
-        public static final int building_info_menu_action_navigate_title=0x7f070027;
-        public static final int building_inventory_action_search_title=0x7f07003f;
-        public static final int building_inventory_search_hint=0x7f070040;
-        public static final int building_inventory_tab_label_east_campus=0x7f070041;
-        public static final int building_inventory_tab_label_west_campus=0x7f070042;
+        public static final int building_info_menu_action_navigate_title=0x7f070028;
+        public static final int building_inventory_action_search_title=0x7f070040;
+        public static final int building_inventory_search_hint=0x7f070041;
+        public static final int building_inventory_tab_label_east_campus=0x7f070042;
+        public static final int building_inventory_tab_label_west_campus=0x7f070043;
         /**  labels of BuildingInventory activity 
          */
-        public static final int building_inventory_title=0x7f07003e;
-        public static final int campus_map_menu_action_about_title=0x7f07002e;
-        public static final int campus_map_menu_action_navigate_title=0x7f07002c;
-        public static final int campus_map_menu_action_satellite_switch_title_0=0x7f070029;
-        public static final int campus_map_menu_action_satellite_switch_title_1=0x7f07002a;
-        public static final int campus_map_menu_action_settings_title=0x7f07002d;
-        public static final int campus_map_menu_action_show_list_title=0x7f07002b;
+        public static final int building_inventory_title=0x7f07003f;
+        public static final int campus_map_menu_action_about_title=0x7f07002f;
+        public static final int campus_map_menu_action_navigate_title=0x7f07002d;
+        public static final int campus_map_menu_action_satellite_switch_title_0=0x7f07002a;
+        public static final int campus_map_menu_action_satellite_switch_title_1=0x7f07002b;
+        public static final int campus_map_menu_action_settings_title=0x7f07002e;
+        public static final int campus_map_menu_action_show_list_title=0x7f07002c;
         /**  labels of CampusMap Activity 
          */
-        public static final int campus_map_title=0x7f070028;
+        public static final int campus_map_title=0x7f070029;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -570,46 +571,47 @@ containing a value of this type.
         public static final int east_campus_lng=0x7f07001d;
         /**  labels of Main Activity 
          */
-        public static final int main_header_text=0x7f070026;
-        public static final int navigation_from_label=0x7f070030;
+        public static final int main_header_text=0x7f070027;
+        public static final int navigation_from_label=0x7f070031;
         /**  api resources needed 
          */
         public static final int navigation_google_map_url=0x7f07001b;
-        public static final int navigation_menu_action_navigate_title=0x7f070035;
-        public static final int navigation_my_location_text_placeholder=0x7f070034;
-        public static final int navigation_navigate_button_text=0x7f070032;
-        public static final int navigation_select_building_button_label=0x7f070033;
+        public static final int navigation_menu_action_navigate_title=0x7f070036;
+        public static final int navigation_my_location_text_placeholder=0x7f070035;
+        public static final int navigation_navigate_button_text=0x7f070033;
+        public static final int navigation_select_building_button_label=0x7f070034;
         /**  labels of Navigation activity 
          */
-        public static final int navigation_title=0x7f07002f;
-        public static final int navigation_to_label=0x7f070031;
-        public static final int navigation_travel_mode_label=0x7f070036;
-        public static final int navigation_travel_mode_option1_label=0x7f070037;
-        public static final int navigation_travel_mode_option2_label=0x7f070038;
-        public static final int navigation_travel_mode_option3_label=0x7f070039;
+        public static final int navigation_title=0x7f070030;
+        public static final int navigation_to_label=0x7f070032;
+        public static final int navigation_travel_mode_label=0x7f070037;
+        public static final int navigation_travel_mode_option1_label=0x7f070038;
+        public static final int navigation_travel_mode_option2_label=0x7f070039;
+        public static final int navigation_travel_mode_option3_label=0x7f07003a;
         /**  some temperary labels unclear 
          */
-        public static final int placeholder=0x7f07005b;
-        public static final int settings_default_location_default_value=0x7f070048;
-        public static final int settings_default_location_dialog_title=0x7f070047;
-        public static final int settings_default_location_key=0x7f070044;
-        public static final int settings_default_location_label=0x7f070045;
-        public static final int settings_default_location_summary=0x7f070046;
-        public static final int settings_default_travel_mode_default_value=0x7f07004d;
-        public static final int settings_default_travel_mode_dialog_title=0x7f07004c;
-        public static final int settings_default_travel_mode_key=0x7f070049;
-        public static final int settings_default_travel_mode_label=0x7f07004a;
-        public static final int settings_default_travel_mode_summary=0x7f07004b;
+        public static final int placeholder=0x7f07005c;
+        public static final int settings_default_location_default_value=0x7f070049;
+        public static final int settings_default_location_dialog_title=0x7f070048;
+        public static final int settings_default_location_key=0x7f070045;
+        public static final int settings_default_location_label=0x7f070046;
+        public static final int settings_default_location_summary=0x7f070047;
+        public static final int settings_default_travel_mode_default_value=0x7f07004e;
+        public static final int settings_default_travel_mode_dialog_title=0x7f07004d;
+        public static final int settings_default_travel_mode_key=0x7f07004a;
+        public static final int settings_default_travel_mode_label=0x7f07004b;
+        public static final int settings_default_travel_mode_summary=0x7f07004c;
         /**  labels of Preferences keys 
          */
-        public static final int settings_not_show_alert_key=0x7f07004f;
-        public static final int settings_not_show_welcome_key=0x7f070050;
+        public static final int settings_not_show_alert_key=0x7f070050;
+        public static final int settings_not_show_welcome_key=0x7f070051;
         /**  labels of Settings Activity 
          */
-        public static final int settings_title=0x7f070043;
+        public static final int settings_title=0x7f070044;
         public static final int welcome_author_label=0x7f070022;
         public static final int welcome_cs_name_label=0x7f070021;
-        public static final int welcome_start_button_label=0x7f070025;
+        public static final int welcome_not_show_again_label=0x7f070025;
+        public static final int welcome_start_button_label=0x7f070026;
         public static final int welcome_supervised_by_label=0x7f070023;
         public static final int welcome_supervisor_by_label=0x7f070024;
         /**  labels of Welcome Activity 

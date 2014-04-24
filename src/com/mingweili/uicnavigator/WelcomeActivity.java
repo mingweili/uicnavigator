@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.CheckBox;
 
 
 /**
@@ -36,10 +37,12 @@ public class WelcomeActivity extends Activity {
 	 * Home screen will show, also first time use will be recorded
 	 */
 	public void getStartedAction(View view) {
-		SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
-		preference.edit()
-			.putBoolean(getResources().getString(R.string.settings_not_show_welcome_key), true).commit();
-		
+		CheckBox notShowCheckBox = (CheckBox) this.findViewById(R.id.welcome_not_show_again_checkbox);
+		if(notShowCheckBox.isChecked()) {
+			SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+			preference.edit()
+				.putBoolean(getResources().getString(R.string.settings_not_show_welcome_key), true).commit();
+		}
 		this.startMainActivity();
 	}
 	

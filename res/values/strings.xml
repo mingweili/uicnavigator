@@ -19,6 +19,7 @@
     <string name="welcome_author_label">Mingwei Li</string>
     <string name="welcome_supervised_by_label">Supervised by</string>
     <string name="welcome_supervisor_by_label">Prof. Ugo Buy</string>
+    <string name="welcome_not_show_again_label">Do not show this again</string>
     <string name="welcome_start_button_label">Get Started!</string>
 
     <!-- labels of Main Activity -->

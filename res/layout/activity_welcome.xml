@@ -67,8 +67,18 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/welcome_start_button_label"
-        android:onClick="getStartedAction" />
+        android:layout_alignParentLeft="true"
+        android:onClick="getStartedAction"
+        android:text="@string/welcome_start_button_label" />
+
+    <CheckBox
+        android:id="@+id/welcome_not_show_again_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcome_start_button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="4dp"
+        android:background="@color/black_overlay"
+        android:text="@string/welcome_not_show_again_label" />
 
 </RelativeLayout>
