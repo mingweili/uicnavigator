@@ -1,3 +1,7 @@
+/**
+ * © Mingwei Li, 2014. All rights reserved.
+ */
+
 package com.mingweili.uicnavigator.models;
 
 import android.app.Activity;

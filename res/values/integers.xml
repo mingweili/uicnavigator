@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	© Mingwei Li, 2014. All rights reserved. 
+-->
+
 <resources>
     <integer name="initial_zoom_level">18</integer>
 </resources>

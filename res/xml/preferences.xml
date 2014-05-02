@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	© Mingwei Li, 2014. All rights reserved. 
+-->
+
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
     <ListPreference
         android:key="@string/settings_default_location_key"

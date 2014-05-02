@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	© Mingwei Li, 2014. All rights reserved. 
+-->
+
 <buildings>
     <building id="AA">
         <name>Art and Architecture Building</name>
@@ -427,6 +430,7 @@
         <area>east</area>
         <depts>
             <dept>Learning Sciences Research Institute</dept>
+            <dept>UIC Innovation Center</dept>
         </depts>
     </building>
     <building id="TBH">

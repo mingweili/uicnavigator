@@ -1,3 +1,7 @@
+/**
+ * © Mingwei Li, 2014. All rights reserved.
+ */
+
 package com.mingweili.uicnavigator;
 
 import android.app.Activity;
@@ -9,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -81,6 +86,16 @@ public class NavigationActivity extends Activity implements
 			travelMode.check(R.id.navigation_travel_mode_option_1);
 		}
 	}
+
+	/**
+	 * Method in terms of Activity life cycle.
+	 * It will update user's "My location" when user goes back to this activity.
+	 */
+	@Override
+    protected void onResume() {
+        super.onResume();        
+        this.initializeLocationClient();
+    }
 	
 	/** 
 	 * Method for receiving the selection made by user on BuildingInventory activity
@@ -137,6 +152,7 @@ public class NavigationActivity extends Activity implements
 		this.mOriginLagLng[1] = current.getLongitude();
 		this.mOriginText = getResources().getString(R.string.navigation_my_location_text_placeholder);
 		((EditText)findViewById(R.id.navigation_from_edittext)).setText(this.mOriginText);
+		Log.e("location", this.mOriginLagLng[0] + ", " + this.mOriginLagLng[1]);
 	}
 
 	/**
